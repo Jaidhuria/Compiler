@@ -1,0 +1,31 @@
+digraph "CFG for 'calculateSum' function" {
+	label="CFG for 'calculateSum' function";
+
+	Node0x5a1f3060c190 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d0473d70", fontname="Courier",label="{2:\l|  %3 = icmp sgt i32 %1, 0\l  br i1 %3, label %4, label %38\l|{<s0>T|<s1>F}}"];
+	Node0x5a1f3060c190:s0 -> Node0x5a1f3060c2c0;
+	Node0x5a1f3060c190:s1 -> Node0x5a1f3060c320;
+	Node0x5a1f3060c2c0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d24b4070", fontname="Courier",label="{4:\l|  %5 = zext nneg i32 %1 to i64\l  %6 = icmp ult i32 %1, 8\l  br i1 %6, label %35, label %7\l|{<s0>T|<s1>F}}"];
+	Node0x5a1f3060c2c0:s0 -> Node0x5a1f3060c570;
+	Node0x5a1f3060c2c0:s1 -> Node0x5a1f3060c5d0;
+	Node0x5a1f3060c5d0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d8564670", fontname="Courier",label="{7:\l|  %8 = and i64 %5, 2147483640\l  br label %9\l}"];
+	Node0x5a1f3060c5d0 -> Node0x5a1f3060c7b0;
+	Node0x5a1f3060c7b0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70", fontname="Courier",label="{9:\l|  %10 = phi i64 [ 0, %7 ], [ %29, %9 ]\l  %11 = phi \<4 x i32\> [ zeroinitializer, %7 ], [ %26, %9 ]\l  %12 = phi \<4 x i32\> [ zeroinitializer, %7 ], [ %28, %9 ]\l  %13 = getelementptr inbounds nuw [4 x i8], ptr %0, i64 %10\l  %14 = getelementptr inbounds nuw i8, ptr %13, i64 16\l  %15 = load \<4 x i32\>, ptr %13, align 4, !tbaa !4\l  %16 = load \<4 x i32\>, ptr %14, align 4, !tbaa !4\l  %17 = add \<4 x i32\> %15, %11\l  %18 = add \<4 x i32\> %16, %12\l  %19 = icmp sgt \<4 x i32\> %15, splat (i32 500)\l  %20 = icmp sgt \<4 x i32\> %16, splat (i32 500)\l  %21 = sdiv \<4 x i32\> %15, splat (i32 -3)\l  %22 = sdiv \<4 x i32\> %16, splat (i32 -3)\l  %23 = lshr \<4 x i32\> %15, splat (i32 1)\l  %24 = lshr \<4 x i32\> %16, splat (i32 1)\l  %25 = select \<4 x i1\> %19, \<4 x i32\> %23, \<4 x i32\> %21\l  %26 = add \<4 x i32\> %17, %25\l  %27 = select \<4 x i1\> %20, \<4 x i32\> %24, \<4 x i32\> %22\l  %28 = add \<4 x i32\> %18, %27\l  %29 = add nuw i64 %10, 8\l  %30 = icmp eq i64 %29, %8\l  br i1 %30, label %31, label %9, !llvm.loop !15\l|{<s0>T|<s1>F}}"];
+	Node0x5a1f3060c7b0:s0 -> Node0x5a1f3060db50;
+	Node0x5a1f3060c7b0:s1 -> Node0x5a1f3060c7b0;
+	Node0x5a1f3060db50 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d8564670", fontname="Courier",label="{31:\l|  %32 = add \<4 x i32\> %28, %26\l  %33 = tail call i32 @llvm.vector.reduce.add.v4i32(\<4 x i32\> %32)\l  %34 = icmp eq i64 %8, %5\l  br i1 %34, label %38, label %35\l|{<s0>T|<s1>F}}"];
+	Node0x5a1f3060db50:s0 -> Node0x5a1f3060c320;
+	Node0x5a1f3060db50:s1 -> Node0x5a1f3060c570;
+	Node0x5a1f3060c570 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470", fontname="Courier",label="{35:\l|  %36 = phi i64 [ 0, %4 ], [ %8, %31 ]\l  %37 = phi i32 [ 0, %4 ], [ %33, %31 ]\l  br label %40\l}"];
+	Node0x5a1f3060c570 -> Node0x5a1f3060e250;
+	Node0x5a1f3060c320 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d0473d70", fontname="Courier",label="{38:\l|  %39 = phi i32 [ 0, %2 ], [ %33, %31 ], [ %54, %53 ]\l  ret i32 %39\l}"];
+	Node0x5a1f3060e250 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{40:\l|  %41 = phi i64 [ %55, %53 ], [ %36, %35 ]\l  %42 = phi i32 [ %54, %53 ], [ %37, %35 ]\l  %43 = getelementptr inbounds nuw [4 x i8], ptr %0, i64 %41\l  %44 = load i32, ptr %43, align 4, !tbaa !4\l  %45 = add nsw i32 %44, %42\l  %46 = icmp sgt i32 %44, 500\l  br i1 %46, label %47, label %50\l|{<s0>T|<s1>F}}"];
+	Node0x5a1f3060e250:s0 -> Node0x5a1f3060e890;
+	Node0x5a1f3060e250:s1 -> Node0x5a1f3060e930;
+	Node0x5a1f3060e890 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70", fontname="Courier",label="{47:\l|  %48 = lshr i32 %44, 1\l  %49 = add nsw i32 %45, %48\l  br label %53\l}"];
+	Node0x5a1f3060e890 -> Node0x5a1f3060e320;
+	Node0x5a1f3060e930 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70", fontname="Courier",label="{50:\l|  %51 = sdiv i32 %44, -3\l  %52 = add i32 %51, %45\l  br label %53\l}"];
+	Node0x5a1f3060e930 -> Node0x5a1f3060e320;
+	Node0x5a1f3060e320 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{53:\l|  %54 = phi i32 [ %49, %47 ], [ %52, %50 ]\l  %55 = add nuw nsw i64 %41, 1\l  %56 = icmp eq i64 %55, %5\l  br i1 %56, label %38, label %40, !llvm.loop !16\l|{<s0>T|<s1>F}}"];
+	Node0x5a1f3060e320:s0 -> Node0x5a1f3060c320;
+	Node0x5a1f3060e320:s1 -> Node0x5a1f3060e250;
+}

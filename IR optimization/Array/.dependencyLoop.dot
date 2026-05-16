@@ -1,0 +1,24 @@
+digraph "CFG for 'dependencyLoop' function" {
+	label="CFG for 'dependencyLoop' function";
+
+	Node0x5a1f3060ec10 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d0473d70", fontname="Courier",label="{2:\l|  %3 = icmp sgt i32 %1, 1\l  br i1 %3, label %4, label %29\l|{<s0>T|<s1>F}}"];
+	Node0x5a1f3060ec10:s0 -> Node0x5a1f3060ed00;
+	Node0x5a1f3060ec10:s1 -> Node0x5a1f3060ed60;
+	Node0x5a1f3060ed00 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470", fontname="Courier",label="{4:\l|  %5 = zext nneg i32 %1 to i64\l  %6 = load i32, ptr %0, align 4\l  %7 = add nsw i64 %5, -1\l  %8 = and i64 %7, 3\l  %9 = add nsw i32 %1, -2\l  %10 = icmp ult i32 %9, 3\l  br i1 %10, label %15, label %11\l|{<s0>T|<s1>F}}"];
+	Node0x5a1f3060ed00:s0 -> Node0x5a1f3060f230;
+	Node0x5a1f3060ed00:s1 -> Node0x5a1f3060f8c0;
+	Node0x5a1f3060f8c0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d8564670", fontname="Courier",label="{11:\l|  %12 = and i64 %7, -4\l  br label %30\l}"];
+	Node0x5a1f3060f8c0 -> Node0x5a1f3060fad0;
+	Node0x5a1f3060fba0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d8564670", fontname="Courier",label="{13:\l|  %14 = icmp eq i64 %8, 0\l  br i1 %14, label %29, label %15\l|{<s0>T|<s1>F}}"];
+	Node0x5a1f3060fba0:s0 -> Node0x5a1f3060ed60;
+	Node0x5a1f3060fba0:s1 -> Node0x5a1f3060f230;
+	Node0x5a1f3060f230 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470", fontname="Courier",label="{15:\l|  %16 = phi i32 [ %6, %4 ], [ %48, %13 ]\l  %17 = phi i64 [ 1, %4 ], [ %49, %13 ]\l  %18 = icmp ne i64 %8, 0\l  tail call void @llvm.assume(i1 %18)\l  br label %19\l}"];
+	Node0x5a1f3060f230 -> Node0x5a1f306101d0;
+	Node0x5a1f306101d0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{19:\l|  %20 = phi i32 [ %16, %15 ], [ %25, %19 ]\l  %21 = phi i64 [ %17, %15 ], [ %26, %19 ]\l  %22 = phi i64 [ 0, %15 ], [ %27, %19 ]\l  %23 = getelementptr inbounds nuw [4 x i8], ptr %0, i64 %21\l  %24 = load i32, ptr %23, align 4, !tbaa !4\l  %25 = add nsw i32 %20, %24\l  store i32 %25, ptr %23, align 4, !tbaa !4\l  %26 = add nuw nsw i64 %21, 1\l  %27 = add i64 %22, 1\l  %28 = icmp eq i64 %27, %8\l  br i1 %28, label %29, label %19, !llvm.loop !17\l|{<s0>T|<s1>F}}"];
+	Node0x5a1f306101d0:s0 -> Node0x5a1f3060ed60;
+	Node0x5a1f306101d0:s1 -> Node0x5a1f306101d0;
+	Node0x5a1f3060ed60 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d0473d70", fontname="Courier",label="{29:\l|  ret void\l}"];
+	Node0x5a1f3060fad0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70", fontname="Courier",label="{30:\l|  %31 = phi i32 [ %6, %11 ], [ %48, %30 ]\l  %32 = phi i64 [ 1, %11 ], [ %49, %30 ]\l  %33 = phi i64 [ 0, %11 ], [ %50, %30 ]\l  %34 = getelementptr inbounds nuw [4 x i8], ptr %0, i64 %32\l  %35 = load i32, ptr %34, align 4, !tbaa !4\l  %36 = add nsw i32 %31, %35\l  store i32 %36, ptr %34, align 4, !tbaa !4\l  %37 = getelementptr inbounds nuw [4 x i8], ptr %0, i64 %32\l  %38 = getelementptr inbounds nuw i8, ptr %37, i64 4\l  %39 = load i32, ptr %38, align 4, !tbaa !4\l  %40 = add nsw i32 %36, %39\l  store i32 %40, ptr %38, align 4, !tbaa !4\l  %41 = getelementptr inbounds nuw [4 x i8], ptr %0, i64 %32\l  %42 = getelementptr inbounds nuw i8, ptr %41, i64 8\l  %43 = load i32, ptr %42, align 4, !tbaa !4\l  %44 = add nsw i32 %40, %43\l  store i32 %44, ptr %42, align 4, !tbaa !4\l  %45 = getelementptr inbounds nuw [4 x i8], ptr %0, i64 %32\l  %46 = getelementptr inbounds nuw i8, ptr %45, i64 12\l  %47 = load i32, ptr %46, align 4, !tbaa !4\l  %48 = add nsw i32 %44, %47\l  store i32 %48, ptr %46, align 4, !tbaa !4\l  %49 = add nuw nsw i64 %32, 4\l  %50 = add i64 %33, 4\l  %51 = icmp eq i64 %50, %12\l  br i1 %51, label %13, label %30, !llvm.loop !19\l|{<s0>T|<s1>F}}"];
+	Node0x5a1f3060fad0:s0 -> Node0x5a1f3060fba0;
+	Node0x5a1f3060fad0:s1 -> Node0x5a1f3060fad0;
+}

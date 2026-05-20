@@ -1,0 +1,29 @@
+digraph "CFG for 'main' function" {
+	label="CFG for 'main' function";
+
+	Node0x5567a761fd90 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470", fontname="Courier",label="{0:\l|  %1 = alloca i32, align 4\l  %2 = alloca %\"class.std::vector\", align 8\l  %3 = alloca i32, align 4\l  %4 = alloca i32, align 4\l  %5 = alloca ptr, align 8\l  %6 = alloca i32, align 4\l  %7 = alloca i32, align 4\l  store i32 0, ptr %1, align 4\l  call void @_ZNSt6vectorIiSaIiEEC2Ev(ptr noundef nonnull align 8\l... dereferenceable(24) %2) #9\l  store i32 0, ptr %3, align 4\l  br label %8\l}"];
+	Node0x5567a761fd90 -> Node0x5567a76208f0;
+	Node0x5567a76208f0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{8:\l|  %9 = load i32, ptr %3, align 4\l  %10 = icmp slt i32 %9, 500\l  br i1 %10, label %11, label %22\l|{<s0>T|<s1>F}}"];
+	Node0x5567a76208f0:s0 -> Node0x5567a7620ad0;
+	Node0x5567a76208f0:s1 -> Node0x5567a7620b30;
+	Node0x5567a7620ad0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{11:\l|  %12 = load i32, ptr %3, align 4\l  %13 = mul nsw i32 %12, 3\l  store i32 %13, ptr %4, align 4\l  invoke void @_ZNSt6vectorIiSaIiEE9push_backEOi(ptr noundef nonnull align 8\l... dereferenceable(24) %2, ptr noundef nonnull align 4 dereferenceable(4) %4)\l          to label %14 unwind label %18\l}"];
+	Node0x5567a7620ad0 -> Node0x5567a7620e90;
+	Node0x5567a7620ad0 -> Node0x5567a7620ef0;
+	Node0x5567a7620e90 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{14:\l|  br label %15\l}"];
+	Node0x5567a7620e90 -> Node0x5567a7621200;
+	Node0x5567a7621200 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{15:\l|  %16 = load i32, ptr %3, align 4\l  %17 = add nsw i32 %16, 1\l  store i32 %17, ptr %3, align 4\l  br label %8, !llvm.loop !10\l}"];
+	Node0x5567a7621200 -> Node0x5567a76208f0;
+	Node0x5567a7620ef0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f4c5ad70", fontname="Courier",label="{18:\l|  %19 = landingpad \{ ptr, i32 \}\l          cleanup\l  %20 = extractvalue \{ ptr, i32 \} %19, 0\l  store ptr %20, ptr %5, align 8\l  %21 = extractvalue \{ ptr, i32 \} %19, 1\l  store i32 %21, ptr %6, align 4\l  call void @_ZNSt6vectorIiSaIiEED2Ev(ptr noundef nonnull align 8\l... dead_on_return(24) dereferenceable(24) %2) #9\l  br label %32\l}"];
+	Node0x5567a7620ef0 -> Node0x5567a7621d80;
+	Node0x5567a7620b30 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470", fontname="Courier",label="{22:\l|  %23 = call noundef i32 @_Z12processArrayRSt6vectorIiSaIiEE(ptr noundef\l... nonnull align 8 dereferenceable(24) %2)\l  store i32 %23, ptr %7, align 4\l  %24 = invoke noundef nonnull align 8 dereferenceable(8) ptr\l... @_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc(ptr noundef nonnull\l... align 8 dereferenceable(8) @_ZSt4cout, ptr noundef @.str)\l          to label %25 unwind label %18\l}"];
+	Node0x5567a7620b30 -> Node0x5567a7622070;
+	Node0x5567a7620b30 -> Node0x5567a7620ef0;
+	Node0x5567a7622070 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470", fontname="Courier",label="{25:\l|  %26 = load i32, ptr %7, align 4\l  %27 = invoke noundef nonnull align 8 dereferenceable(8) ptr @_ZNSolsEi(ptr\l... noundef nonnull align 8 dereferenceable(8) %24, i32 noundef %26)\l          to label %28 unwind label %18\l}"];
+	Node0x5567a7622070 -> Node0x5567a7622410;
+	Node0x5567a7622070 -> Node0x5567a7620ef0;
+	Node0x5567a7622410 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470", fontname="Courier",label="{28:\l|  %29 = invoke noundef nonnull align 8 dereferenceable(8) ptr\l... @_ZNSolsEPFRSoS_E(ptr noundef nonnull align 8 dereferenceable(8) %27, ptr\l... noundef @_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_)\l          to label %30 unwind label %18\l}"];
+	Node0x5567a7622410 -> Node0x5567a7622840;
+	Node0x5567a7622410 -> Node0x5567a7620ef0;
+	Node0x5567a7622840 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470", fontname="Courier",label="{30:\l|  store i32 0, ptr %1, align 4\l  call void @_ZNSt6vectorIiSaIiEED2Ev(ptr noundef nonnull align 8\l... dead_on_return(24) dereferenceable(24) %2) #9\l  %31 = load i32, ptr %1, align 4\l  ret i32 %31\l}"];
+	Node0x5567a7621d80 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f4c5ad70", fontname="Courier",label="{32:\l|  %33 = load ptr, ptr %5, align 8\l  %34 = load i32, ptr %6, align 4\l  %35 = insertvalue \{ ptr, i32 \} poison, ptr %33, 0\l  %36 = insertvalue \{ ptr, i32 \} %35, i32 %34, 1\l  resume \{ ptr, i32 \} %36\l}"];
+}

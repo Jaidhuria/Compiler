@@ -1,0 +1,259 @@
+--- |
+  ; ModuleID = 'test.ll'
+  source_filename = "tes.cpp"
+  target datalayout = "e-m:e-p270:32:32-p271:32:32-p272:64:64-i64:64-i128:128-f80:128-n8:16:32:64-S128"
+  target triple = "x86_64-unknown-linux-gnu"
+  
+  module asm ".globl _ZSt21ios_base_library_initv"
+  
+  %"class.std::basic_ostream" = type { ptr, %"class.std::basic_ios" }
+  %"class.std::basic_ios" = type { %"class.std::ios_base", ptr, i8, i8, ptr, ptr, ptr, ptr }
+  %"class.std::ios_base" = type { ptr, i64, i64, i32, i32, i32, ptr, %"struct.std::ios_base::_Words", [8 x %"struct.std::ios_base::_Words"], i32, ptr, %"class.std::locale" }
+  %"struct.std::ios_base::_Words" = type { ptr, i64 }
+  %"class.std::locale" = type { ptr }
+  
+  @_ZSt4cout = external global %"class.std::basic_ostream", align 8
+  
+  ; Function Attrs: mustprogress norecurse uwtable
+  define dso_local noundef i32 @main() local_unnamed_addr #0 {
+    %1 = tail call noundef nonnull align 8 dereferenceable(8) ptr @_ZNSolsEi(ptr noundef nonnull align 8 dereferenceable(8) @_ZSt4cout, i32 noundef 100)
+    %2 = load ptr, ptr %1, align 8, !tbaa !8
+    %3 = getelementptr i8, ptr %2, i64 -24
+    %4 = load i64, ptr %3, align 8
+    %5 = getelementptr inbounds i8, ptr %1, i64 %4
+    %6 = getelementptr inbounds nuw i8, ptr %5, i64 240
+    %7 = load ptr, ptr %6, align 8, !tbaa !10
+    %8 = icmp eq ptr %7, null
+    br i1 %8, label %9, label %10
+  
+  9:                                                ; preds = %0
+    tail call void @_ZSt16__throw_bad_castv() #3
+    unreachable
+  
+  10:                                               ; preds = %0
+    %11 = getelementptr inbounds nuw i8, ptr %7, i64 56
+    %12 = load i8, ptr %11, align 8, !tbaa !28
+    %13 = icmp eq i8 %12, 0
+    br i1 %13, label %17, label %14
+  
+  14:                                               ; preds = %10
+    %15 = getelementptr inbounds nuw i8, ptr %7, i64 67
+    %16 = load i8, ptr %15, align 1, !tbaa !34
+    br label %22
+  
+  17:                                               ; preds = %10
+    tail call void @_ZNKSt5ctypeIcE13_M_widen_initEv(ptr noundef nonnull align 8 dereferenceable(570) %7)
+    %18 = load ptr, ptr %7, align 8, !tbaa !8
+    %19 = getelementptr inbounds nuw i8, ptr %18, i64 48
+    %20 = load ptr, ptr %19, align 8
+    %21 = tail call noundef signext i8 %20(ptr noundef nonnull align 8 dereferenceable(570) %7, i8 noundef signext 10), !inline_history !35
+    br label %22
+  
+  22:                                               ; preds = %17, %14
+    %23 = phi i8 [ %16, %14 ], [ %21, %17 ]
+    %24 = tail call noundef nonnull align 8 dereferenceable(8) ptr @_ZNSo3putEc(ptr noundef nonnull align 8 dereferenceable(8) %1, i8 noundef signext %23)
+    %25 = tail call noundef nonnull align 8 dereferenceable(8) ptr @_ZNSo5flushEv(ptr noundef nonnull align 8 dereferenceable(8) %24)
+    ret i32 0
+  }
+  
+  declare noundef nonnull align 8 dereferenceable(8) ptr @_ZNSolsEi(ptr noundef nonnull align 8 dereferenceable(8), i32 noundef) local_unnamed_addr #1
+  
+  declare noundef nonnull align 8 dereferenceable(8) ptr @_ZNSo3putEc(ptr noundef nonnull align 8 dereferenceable(8), i8 noundef signext) local_unnamed_addr #1
+  
+  declare noundef nonnull align 8 dereferenceable(8) ptr @_ZNSo5flushEv(ptr noundef nonnull align 8 dereferenceable(8)) local_unnamed_addr #1
+  
+  ; Function Attrs: noreturn
+  declare void @_ZSt16__throw_bad_castv() local_unnamed_addr #2
+  
+  declare void @_ZNKSt5ctypeIcE13_M_widen_initEv(ptr noundef nonnull align 8 dereferenceable(570)) local_unnamed_addr #1
+  
+  attributes #0 = { mustprogress norecurse uwtable "min-legal-vector-width"="0" "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cmov,+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "tune-cpu"="generic" }
+  attributes #1 = { "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cmov,+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "tune-cpu"="generic" }
+  attributes #2 = { noreturn "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cmov,+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "tune-cpu"="generic" }
+  attributes #3 = { noreturn }
+  
+  !llvm.module.flags = !{!0, !1, !2}
+  !llvm.ident = !{!3}
+  !llvm.errno.tbaa = !{!4}
+  
+  !0 = !{i32 8, !"PIC Level", i32 2}
+  !1 = !{i32 7, !"PIE Level", i32 2}
+  !2 = !{i32 7, !"uwtable", i32 2}
+  !3 = !{!"clang version 23.0.0git (https://github.com/llvm/llvm-project.git 7377bac59b4aea64da09873b44df1430571e93c3)"}
+  !4 = !{!5, !5, i64 0}
+  !5 = !{!"int", !6, i64 0}
+  !6 = !{!"omnipotent char", !7, i64 0}
+  !7 = !{!"Simple C++ TBAA"}
+  !8 = !{!9, !9, i64 0}
+  !9 = !{!"vtable pointer", !7, i64 0}
+  !10 = !{!11, !25, i64 240}
+  !11 = !{!"_ZTSSt9basic_iosIcSt11char_traitsIcEE", !12, i64 0, !22, i64 216, !6, i64 224, !23, i64 225, !24, i64 232, !25, i64 240, !26, i64 248, !27, i64 256}
+  !12 = !{!"_ZTSSt8ios_base", !13, i64 8, !13, i64 16, !14, i64 24, !15, i64 28, !15, i64 32, !16, i64 40, !18, i64 48, !6, i64 64, !5, i64 192, !19, i64 200, !20, i64 208}
+  !13 = !{!"long", !6, i64 0}
+  !14 = !{!"_ZTSSt13_Ios_Fmtflags", !6, i64 0}
+  !15 = !{!"_ZTSSt12_Ios_Iostate", !6, i64 0}
+  !16 = !{!"p1 _ZTSNSt8ios_base14_Callback_listE", !17, i64 0}
+  !17 = !{!"any pointer", !6, i64 0}
+  !18 = !{!"_ZTSNSt8ios_base6_WordsE", !17, i64 0, !13, i64 8}
+  !19 = !{!"p1 _ZTSNSt8ios_base6_WordsE", !17, i64 0}
+  !20 = !{!"_ZTSSt6locale", !21, i64 0}
+  !21 = !{!"p1 _ZTSNSt6locale5_ImplE", !17, i64 0}
+  !22 = !{!"p1 _ZTSSo", !17, i64 0}
+  !23 = !{!"bool", !6, i64 0}
+  !24 = !{!"p1 _ZTSSt15basic_streambufIcSt11char_traitsIcEE", !17, i64 0}
+  !25 = !{!"p1 _ZTSSt5ctypeIcE", !17, i64 0}
+  !26 = !{!"p1 _ZTSSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE", !17, i64 0}
+  !27 = !{!"p1 _ZTSSt7num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE", !17, i64 0}
+  !28 = !{!29, !6, i64 56}
+  !29 = !{!"_ZTSSt5ctypeIcE", !30, i64 0, !31, i64 16, !23, i64 24, !32, i64 32, !32, i64 40, !33, i64 48, !6, i64 56, !6, i64 57, !6, i64 313, !6, i64 569}
+  !30 = !{!"_ZTSNSt6locale5facetE", !5, i64 8}
+  !31 = !{!"p1 _ZTS15__locale_struct", !17, i64 0}
+  !32 = !{!"p1 int", !17, i64 0}
+  !33 = !{!"p1 short", !17, i64 0}
+  !34 = !{!6, !6, i64 0}
+  !35 = distinct !{null, null, null, null}
+...
+---
+name:            main
+alignment:       1
+exposesReturnsTwice: false
+legalized:       false
+regBankSelected: false
+selected:        false
+failedISel:      false
+tracksRegLiveness: true
+hasWinCFI:       false
+noPhis:          true
+isSSA:           false
+noVRegs:         false
+hasFakeUses:     false
+callsEHReturn:   false
+callsUnwindInit: false
+hasEHContTarget: false
+hasEHScopes:     false
+hasEHFunclets:   false
+isOutlined:      false
+debugInstrRef:   true
+failsVerification: false
+tracksDebugUserValues: true
+registers:
+  - { id: 0, class: gr64, preferred-register: '', flags: [  ] }
+  - { id: 1, class: gr64, preferred-register: '$rdi', flags: [  ] }
+  - { id: 2, class: gr8, preferred-register: '', flags: [  ] }
+  - { id: 3, class: gr8, preferred-register: '', flags: [  ] }
+  - { id: 4, class: gr8, preferred-register: '', flags: [  ] }
+  - { id: 5, class: gr64, preferred-register: '$rdi', flags: [  ] }
+  - { id: 6, class: gr32, preferred-register: '', flags: [  ] }
+  - { id: 7, class: gr64, preferred-register: '$rax', flags: [  ] }
+  - { id: 8, class: gr64, preferred-register: '', flags: [  ] }
+  - { id: 9, class: gr64_nosp, preferred-register: '', flags: [  ] }
+  - { id: 10, class: gr64, preferred-register: '', flags: [  ] }
+  - { id: 11, class: gr32, preferred-register: '', flags: [  ] }
+  - { id: 12, class: gr8, preferred-register: '', flags: [  ] }
+  - { id: 13, class: gr32, preferred-register: '$esi', flags: [  ] }
+  - { id: 14, class: gr64, preferred-register: '$rax', flags: [  ] }
+  - { id: 15, class: gr64, preferred-register: '', flags: [  ] }
+  - { id: 16, class: gr32, preferred-register: '', flags: [  ] }
+  - { id: 17, class: gr8, preferred-register: '$al', flags: [  ] }
+  - { id: 18, class: gr64, preferred-register: '%19', flags: [  ] }
+  - { id: 19, class: gr64, preferred-register: '$rax', flags: [  ] }
+liveins:         []
+frameInfo:
+  isFrameAddressTaken: false
+  isReturnAddressTaken: false
+  hasStackMap:     false
+  hasPatchPoint:   false
+  stackSize:       0
+  offsetAdjustment: 0
+  maxAlignment:    1
+  adjustsStack:    true
+  hasCalls:        true
+  framePointerPolicy: none
+  stackProtector:  ''
+  functionContext: ''
+  maxCallFrameSize: 4294967295
+  cvBytesOfCalleeSavedRegisters: 0
+  hasOpaqueSPAdjustment: false
+  hasVAStart:      false
+  hasMustTailInVarArgFunc: false
+  hasTailCall:     false
+  isCalleeSavedInfoValid: false
+  localFrameSize:  0
+fixedStack:      []
+stack:           []
+entry_values:    []
+callSites:       []
+debugValueSubstitutions: []
+constants:       []
+machineFunctionInfo:
+  amxProgModel:    None
+body:             |
+  bb.0 (%ir-block.0):
+    successors: %bb.1(0x00000800), %bb.2(0x7ffff800)
+  
+    ADJCALLSTACKDOWN64 0, 0, 0, implicit-def dead $rsp, implicit-def dead $eflags, implicit-def dead $ssp, implicit $rsp, implicit $ssp
+    %5:gr64 = MOV64rm $rip, 1, $noreg, target-flags(x86-gotpcrel) @_ZSt4cout, $noreg :: (load (s64) from got)
+    $rdi = COPY %5
+    $esi = MOV32ri 100
+    CALL64pcrel32 target-flags(x86-plt) @_ZNSolsEi, csr_64, implicit $rsp, implicit $ssp, implicit $rdi, implicit $esi, implicit-def $rsp, implicit-def $ssp, implicit-def $rax
+    ADJCALLSTACKUP64 0, 0, implicit-def dead $rsp, implicit-def dead $eflags, implicit-def dead $ssp, implicit $rsp, implicit $ssp
+    %19:gr64 = COPY $rax
+    %8:gr64 = MOV64rm %19, 1, $noreg, 0, $noreg :: (dereferenceable load (s64) from %ir.1, !tbaa !8)
+    %9:gr64_nosp = MOV64rm %8, 1, $noreg, -24, $noreg :: (load (s64) from %ir.3)
+    %1:gr64 = MOV64rm %19, 1, %9, 240, $noreg :: (load (s64) from %ir.6, !tbaa !10)
+    TEST64rr %1, %1, implicit-def $eflags
+    JCC_1 %bb.2, 5, implicit killed $eflags
+    JMP_1 %bb.1
+  
+  bb.1 (%ir-block.9):
+    successors:
+  
+    ADJCALLSTACKDOWN64 0, 0, 0, implicit-def dead $rsp, implicit-def dead $eflags, implicit-def dead $ssp, implicit $rsp, implicit $ssp
+    CALL64pcrel32 target-flags(x86-plt) @_ZSt16__throw_bad_castv, csr_64, implicit $rsp, implicit $ssp, implicit-def $rsp, implicit-def $ssp
+    ADJCALLSTACKUP64 0, 0, implicit-def dead $rsp, implicit-def dead $eflags, implicit-def dead $ssp, implicit $rsp, implicit $ssp
+  
+  bb.2 (%ir-block.10):
+    successors: %bb.4(0x30000000), %bb.3(0x50000000)
+  
+    CMP8mi %1, 1, $noreg, 56, $noreg, 0, implicit-def $eflags :: (load (s8) from %ir.11, align 8, !tbaa !28)
+    JCC_1 %bb.4, 4, implicit killed $eflags
+    JMP_1 %bb.3
+  
+  bb.3 (%ir-block.14):
+    successors: %bb.5(0x80000000)
+  
+    %17:gr8 = MOV8rm %1, 1, $noreg, 67, $noreg :: (load (s8) from %ir.15, !tbaa !34)
+    JMP_1 %bb.5
+  
+  bb.4 (%ir-block.17):
+    successors: %bb.5(0x80000000)
+  
+    ADJCALLSTACKDOWN64 0, 0, 0, implicit-def dead $rsp, implicit-def dead $eflags, implicit-def dead $ssp, implicit $rsp, implicit $ssp
+    $rdi = COPY %1
+    %18:gr64 = COPY %19
+    CALL64pcrel32 target-flags(x86-plt) @_ZNKSt5ctypeIcE13_M_widen_initEv, csr_64, implicit $rsp, implicit $ssp, implicit $rdi, implicit-def $rsp, implicit-def $ssp
+    ADJCALLSTACKUP64 0, 0, implicit-def dead $rsp, implicit-def dead $eflags, implicit-def dead $ssp, implicit $rsp, implicit $ssp
+    %10:gr64 = MOV64rm %1, 1, $noreg, 0, $noreg :: (load (s64) from %ir.7, !tbaa !8)
+    ADJCALLSTACKDOWN64 0, 0, 0, implicit-def dead $rsp, implicit-def dead $eflags, implicit-def dead $ssp, implicit $rsp, implicit $ssp
+    $rdi = COPY %1
+    $esi = MOV32ri 10
+    CALL64m %10, 1, $noreg, 48, $noreg, csr_64, implicit $rsp, implicit $ssp, implicit $rdi, implicit $esi, implicit-def $rsp, implicit-def $ssp, implicit-def $al :: (load (s64) from %ir.19)
+    ADJCALLSTACKUP64 0, 0, implicit-def dead $rsp, implicit-def dead $eflags, implicit-def dead $ssp, implicit $rsp, implicit $ssp
+    %17:gr8 = COPY $al
+    %19:gr64 = COPY %18
+  
+  bb.5 (%ir-block.22):
+    ADJCALLSTACKDOWN64 0, 0, 0, implicit-def dead $rsp, implicit-def dead $eflags, implicit-def dead $ssp, implicit $rsp, implicit $ssp
+    %13:gr32 = MOVSX32rr8 %17
+    $rdi = COPY %19
+    $esi = COPY %13
+    CALL64pcrel32 target-flags(x86-plt) @_ZNSo3putEc, csr_64, implicit $rsp, implicit $ssp, implicit $rdi, implicit $esi, implicit-def $rsp, implicit-def $ssp, implicit-def $rax
+    ADJCALLSTACKUP64 0, 0, implicit-def dead $rsp, implicit-def dead $eflags, implicit-def dead $ssp, implicit $rsp, implicit $ssp
+    %14:gr64 = COPY $rax
+    ADJCALLSTACKDOWN64 0, 0, 0, implicit-def dead $rsp, implicit-def dead $eflags, implicit-def dead $ssp, implicit $rsp, implicit $ssp
+    $rdi = COPY %14
+    CALL64pcrel32 target-flags(x86-plt) @_ZNSo5flushEv, csr_64, implicit $rsp, implicit $ssp, implicit $rdi, implicit-def $rsp, implicit-def $ssp, implicit-def dead $rax
+    ADJCALLSTACKUP64 0, 0, implicit-def dead $rsp, implicit-def dead $eflags, implicit-def dead $ssp, implicit $rsp, implicit $ssp
+    $eax = MOV32r0 implicit-def dead $eflags
+    RET 0, $eax
+...

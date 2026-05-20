@@ -1,0 +1,5 @@
+digraph "CFG for '_ZNSt6vectorIiSaIiEE9push_backEOi' function" {
+	label="CFG for '_ZNSt6vectorIiSaIiEE9push_backEOi' function";
+
+	Node0x5567a7623a60 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{2:\l|  %3 = alloca ptr, align 8\l  %4 = alloca ptr, align 8\l  store ptr %0, ptr %3, align 8\l  store ptr %1, ptr %4, align 8\l  %5 = load ptr, ptr %3, align 8\l  %6 = load ptr, ptr %4, align 8, !nonnull !7, !align !11\l  %7 = call noundef nonnull align 4 dereferenceable(4) ptr\l... @_ZNSt6vectorIiSaIiEE12emplace_backIJiEEERiDpOT_(ptr noundef nonnull align 8\l... dereferenceable(24) %5, ptr noundef nonnull align 4 dereferenceable(4) %6)\l  ret void\l}"];
+}

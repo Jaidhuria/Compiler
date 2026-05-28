@@ -1,20 +1,34 @@
 <div align="center">
 
-# ⚙️ LLVM Compiler
+<img src="https://llvm.org/img/DragonMedium.png" width="110" alt="LLVM Dragon"/>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="https://llvm.org/img/LLVMWyvernSmall.png" width="110" alt="LLVM Wyvern"/>
 
-### IR Generation · Optimization Passes · CFG Analysis
+# 🔧 IRForge
 
-![LLVM](https://img.shields.io/badge/LLVM-15+-6c63ff?style=for-the-badge&logo=llvm&logoColor=white)
-![Clang](https://img.shields.io/badge/Clang-Frontend-00d4aa?style=for-the-badge&logo=llvm&logoColor=white)
-![Language](https://img.shields.io/badge/Language-C%2FC%2B%2B-f5a623?style=for-the-badge&logo=c&logoColor=white)
-![Build](https://img.shields.io/badge/Build-CMake-4da6ff?style=for-the-badge&logo=cmake&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-4caf88?style=for-the-badge)
+### LLVM-Based Compiler Research · Internship Project
+
+[![LLVM](https://img.shields.io/badge/LLVM-15+-6c63ff?style=for-the-badge&logo=llvm&logoColor=white)](https://llvm.org/)
+[![Clang](https://img.shields.io/badge/Clang-Frontend-00d4aa?style=for-the-badge&logo=llvm&logoColor=white)](https://clang.llvm.org/)
+[![IR2Vec](https://img.shields.io/badge/IR2Vec-Embeddings-ff6b6b?style=for-the-badge&logo=llvm&logoColor=white)](https://github.com/IITH-Compilers/IR2Vec)
+[![Language](https://img.shields.io/badge/Language-C%2FC%2B%2B-f5a623?style=for-the-badge&logo=c&logoColor=white)](https://isocpp.org/)
+[![Build](https://img.shields.io/badge/Build-CMake-4da6ff?style=for-the-badge&logo=cmake&logoColor=white)](https://cmake.org/)
+[![License](https://img.shields.io/badge/License-MIT-4caf88?style=for-the-badge)](LICENSE)
 
 <br/>
 
-A compiler built on LLVM infrastructure — from frontend parsing and IR generation through
-optimization passes and native code emission. Covers SSA transformation, control flow graphs,
+> *Internship research project exploring LLVM infrastructure — from frontend parsing and IR generation*  
+> *through optimization passes, IR2Vec embeddings, and native code emission.*
+
+Covers **SSA transformation**, **control flow graphs**, **IR2Vec program representations**,  
 and the full LLVM pass manager pipeline.
+
+<br/>
+
+```
+Frontend  ──▶  IR Gen  ──▶  IR2Vec  ──▶  Optimizer  ──▶  Codegen
+  AST            SSA        Embed         Passes         Native
+```
 
 </div>
 
@@ -60,15 +74,159 @@ cmake --build build
 
 ---
 
+## IR2Vec — Program Embeddings
+
+[**IR2Vec**](https://github.com/IITH-Compilers/IR2Vec) is an LLVM IR-based framework that generates **compact vector representations** of programs in an unsupervised manner, capturing intrinsic program characteristics for downstream ML tasks. Published in **ACM TACO** by researchers at IIT Hyderabad.
+
+### Complete IR2Vec Pipeline
+
+<div align="center">
+
+![IR2Vec Complete Pipeline](Readme/ir2vec_pipeline.png)
+
+*The full IR2Vec pipeline — from training a seed embedding vocabulary to generating program vectors for downstream ML tasks*
+
+</div>
+
+The pipeline operates in **three distinct phases**:
+
+---
+
+#### 🏋️ Phase 1 — Training
+
+The training phase builds a **Seed Embedding Vocabulary** that maps every LLVM IR construct to a vector:
+
+```
+Programs for Training
+        │
+        ▼
+  LLVM-IR Instructions  ◀──  compiled via clang
+        │
+        ▼
+     Triplets           ──  (anchor, positive, negative) relation triples
+        │                    extracted from use-def, type, and opcode info
+        ▼
+Representation Learning ──  trains embeddings via a neural model
+        │
+        ▼
+Seed Embedding Vocabulary ──  final lookup table: opcode/type/operand → vector
+```
+
+> The vocabulary is trained **once** and reused across all programs — no per-program training needed.
+
+---
+
+#### 🔍 Phase 2 — Inference
+
+Given any new program (C / C++ / Fortran), IR2Vec generates embeddings hierarchically:
+
+```
+Program Source (C / C++ / Fortran)
+        │
+        ▼  clang → LLVM IR
+ LLVM-IR Instructions
+        │
+        ▼  lookup seed embeddings + propagate
+  Instruction Vector  ◀──── Update & Kill loop
+        │       ▲              (Use-Def chains +
+        │       └──────────── Reaching Definitions)
+        │   Call Instruction feedback
+        │
+        ├──▶  Basic Block Vector   (aggregate over instructions in a BB)
+        │
+        ├──▶  Function Vector      (aggregate over basic blocks)
+        │
+        └──▶  Program Vector       (aggregate over functions)
+```
+
+**Flow-Aware mode** additionally propagates information along data-flow edges using **reaching definitions** and **use-def chains**, making embeddings context-sensitive rather than purely local.
+
+| Level | Built From | Captures |
+|---|---|---|
+| `Instruction Vector` | Seed vocab + data-flow propagation | Opcode, types, operands, live info |
+| `Basic Block Vector` | Sum of instruction vectors in the BB | Straight-line execution semantics |
+| `Function Vector` | Aggregated basic block vectors | Full function-level behaviour |
+| `Program Vector` | Aggregated function vectors | Whole-program representation |
+
+---
+
+#### 🎯 Phase 3 — Downstream Tasks
+
+The final **Encodings** (stacked function/program vectors) feed directly into ML models:
+
+```
+Program Vector / Function Encodings
+        │
+        ▼
+  Neural Networks  ──▶  Pass ordering & selection
+                   ──▶  Performance prediction
+                   ──▶  Compiler heuristic learning
+                   ──▶  Code similarity & clustering
+                   ──▶  Auto-vectorization decisions
+```
+
+---
+
+### Why IR2Vec?
+
+| Capability | Description |
+|---|---|
+| 🧠 **Hierarchical Representation** | Instruction → Basic Block → Function → Program, all from one vocabulary |
+| ⚡ **ML-Ready** | 300-dim vectors plug directly into any downstream neural model |
+| 🔍 **Flow-Aware** | Reaching definitions and use-def chains capture data-flow context |
+| 🎯 **Language Agnostic** | Works on any language that compiles to LLVM IR (C, C++, Fortran, Rust…) |
+| 🚀 **No Per-Program Training** | Seed vocabulary trained once; inference is fast and unsupervised |
+
+### Generating IR2Vec Embeddings
+
+```bash
+# Step 1 — emit LLVM IR
+clang -O0 -emit-llvm -S input.c -o input.ll
+
+# Step 2 — generate function-level embeddings (symbolic mode)
+ir2vec -sym -o embeddings.txt input.ll
+
+# Step 3 — generate with flow-aware propagation (richer, data-flow sensitive)
+ir2vec -fa -o embeddings_fa.txt input.ll
+
+# Step 4 — inspect embedding for a specific function
+grep "^compute" embeddings.txt
+
+# Python interface
+pip install ir2vec
+```
+
+```python
+import ir2vec
+
+# Load IR and generate embeddings
+ir = ir2vec.initEmbedding("input.ll", "fa", "funcLevel")
+embeddings = ir2vec.getFunctionEmbeddings(ir)
+# embeddings → dict { function_name: np.array(300,) }
+```
+
+### Embedding Output Format
+
+```
+# function_name  [ dim_0    dim_1    ...  dim_299 ]
+compute           0.142   -0.037   0.891  ...  0.204
+main              0.033    0.761  -0.112  ...  -0.509
+```
+
+> Each function maps to a **300-dimensional vector** capturing its full IR semantics.  
+> These vectors feed classifiers for heuristic learning, pass ordering, and auto-vectorization decisions.
+
+---
+
 ## Compiler Pipeline
 
 ```
-┌─────────────┐     ┌─────────────┐     ┌─────────────┐     ┌─────────────┐
-│   Frontend  │────▶│   IR Gen    │────▶│  Optimizer  │────▶│   Codegen   │
-│             │     │             │     │             │     │             │
-│ Lex · Parse │     │ AST → LLVM  │     │ Pass Manager│     │ IR → Native │
-│    · AST    │     │  IR · SSA   │     │ DCE · Inline│     │    Code     │
-└─────────────┘     └─────────────┘     └─────────────┘     └─────────────┘
+┌─────────────┐     ┌─────────────┐     ┌─────────────┐     ┌─────────────┐     ┌─────────────┐
+│   Frontend  │────▶│   IR Gen    │────▶│   IR2Vec    │────▶│  Optimizer  │────▶│   Codegen   │
+│             │     │             │     │             │     │             │     │             │
+│ Lex · Parse │     │ AST → LLVM  │     │ IR → Vector │     │ Pass Manager│     │ IR → Native │
+│    · AST    │     │  IR · SSA   │     │ Embeddings  │     │ DCE · Inline│     │    Code     │
+└─────────────┘     └─────────────┘     └─────────────┘     └─────────────┘     └─────────────┘
 ```
 
 ---
@@ -174,7 +332,7 @@ Unoptimized IR
     ├─▶ licm           loop-invariant exprs      →  hoisted above loop header
     └─▶ gvn            redundant computations    →  replaced with earlier result
     │
-Optimized IR  ──▶  llc  ──▶  Native Binary
+Optimized IR  ──▶  IR2Vec  ──▶  llc  ──▶  Native Binary
 ```
 
 ### Real Example — Loop Optimization
@@ -292,6 +450,7 @@ cd build && ctest --output-on-failure
 |------|------|----------|
 | `clang` | C/C++ source → LLVM IR | ![Frontend](https://img.shields.io/badge/Frontend-6c63ff?style=flat-square) |
 | `opt` | Apply and inspect LLVM passes | ![Optimizer](https://img.shields.io/badge/Optimizer-00d4aa?style=flat-square) |
+| `ir2vec` | LLVM IR → program embedding vectors | ![Embeddings](https://img.shields.io/badge/Embeddings-ff6b6b?style=flat-square) |
 | `llc` | LLVM IR → target assembly / object code | ![Codegen](https://img.shields.io/badge/Codegen-ff6b6b?style=flat-square) |
 | `graphviz` | Render DOT files into CFG images | ![Visualizer](https://img.shields.io/badge/Visualizer-f5a623?style=flat-square) |
 | `cmake` | Build system configuration | ![Build](https://img.shields.io/badge/Build-4da6ff?style=flat-square) |
@@ -307,11 +466,17 @@ cd build && ctest --output-on-failure
 - [LLVM Alias Analysis](https://llvm.org/docs/AliasAnalysis.html)
 - [Kaleidoscope Tutorial — Build a JIT compiler](https://llvm.org/docs/tutorial/)
 - [LLVM Analysis and Transform Passes](https://llvm.org/docs/Passes.html)
+- [IR2Vec: LLVM IR-based Program Representation](https://github.com/IITH-Compilers/IR2Vec)
+- [IR2Vec Paper (arxiv)](https://arxiv.org/abs/2011.12244)
 
 ---
 
 <div align="center">
 
-![MIT License](https://img.shields.io/badge/License-MIT-4caf88?style=for-the-badge)
+<img src="https://llvm.org/img/DragonMedium.png" width="60" alt="LLVM"/>
+
+*Built on LLVM infrastructure · Internship Research Project*
+
+[![MIT License](https://img.shields.io/badge/License-MIT-4caf88?style=for-the-badge)](LICENSE)
 
 </div>

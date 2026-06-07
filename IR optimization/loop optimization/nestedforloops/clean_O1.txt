@@ -1,0 +1,314 @@
+Running pass: MemProfRemoveInfo on [module]
+Running pass: Annotation2MetadataPass on [module]
+Running pass: ForceFunctionAttrsPass on [module]
+Running pass: InferFunctionAttrsPass on [module]
+Running pass: CoroEarlyPass on [module]
+Running pass: EntryExitInstrumenterPass on _Z7computei (16 instructions)
+Running pass: LowerExpectIntrinsicPass on _Z7computei (16 instructions)
+Running pass: SimplifyCFGPass on _Z7computei (16 instructions)
+Running pass: SROAPass on _Z7computei (16 instructions)
+Running pass: EarlyCSEPass on _Z7computei (16 instructions)
+Running pass: EntryExitInstrumenterPass on _Z12processArrayRSt6vectorIiSaIiEE (41 instructions)
+Running pass: LowerExpectIntrinsicPass on _Z12processArrayRSt6vectorIiSaIiEE (41 instructions)
+Running pass: SimplifyCFGPass on _Z12processArrayRSt6vectorIiSaIiEE (41 instructions)
+Running pass: SROAPass on _Z12processArrayRSt6vectorIiSaIiEE (41 instructions)
+Running pass: EarlyCSEPass on _Z12processArrayRSt6vectorIiSaIiEE (41 instructions)
+Running pass: EntryExitInstrumenterPass on main (137 instructions)
+Running pass: LowerExpectIntrinsicPass on main (137 instructions)
+Running pass: SimplifyCFGPass on main (137 instructions)
+Running pass: SROAPass on main (137 instructions)
+Running pass: EarlyCSEPass on main (137 instructions)
+Running pass: OpenMPOptPass on [module]
+Running pass: IPSCCPPass on [module]
+Running pass: CalledValuePropagationPass on [module]
+Running pass: GlobalOptPass on [module]
+Running pass: PromotePass on _Z7computei (16 instructions)
+Running pass: InstCombinePass on _Z7computei (16 instructions)
+Running pass: SimplifyCFGPass on _Z7computei (16 instructions)
+Running pass: PromotePass on _Z12processArrayRSt6vectorIiSaIiEE (41 instructions)
+Running pass: InstCombinePass on _Z12processArrayRSt6vectorIiSaIiEE (41 instructions)
+Running pass: SimplifyCFGPass on _Z12processArrayRSt6vectorIiSaIiEE (41 instructions)
+Running pass: PromotePass on main (137 instructions)
+Running pass: InstCombinePass on main (137 instructions)
+Running pass: SimplifyCFGPass on main (137 instructions)
+Running pass: AlwaysInlinerPass on [module]
+Running pass: ModuleInlinerWrapperPass on [module]
+Running pass: RequireAnalysisPass<GlobalsAA, Module> on [module]
+Running pass: InvalidateAnalysisPass<AAManager> on _Z7computei (16 instructions)
+Running pass: InvalidateAnalysisPass<AAManager> on _Z12processArrayRSt6vectorIiSaIiEE (41 instructions)
+Running pass: InvalidateAnalysisPass<AAManager> on main (137 instructions)
+Running pass: RequireAnalysisPass<ProfileSummaryAnalysis, Module> on [module]
+Running pass: DevirtSCCRepeatedPass on (_Z7computei) (1 node)
+Running pass: InlinerPass on (_Z7computei) (1 node)
+Running pass: PostOrderFunctionAttrsPass on (_Z7computei) (1 node)
+Running pass: SROAPass on _Z7computei (16 instructions)
+Running pass: EarlyCSEPass on _Z7computei (16 instructions)
+Running pass: SimplifyCFGPass on _Z7computei (16 instructions)
+Running pass: InstCombinePass on _Z7computei (16 instructions)
+Running pass: LibCallsShrinkWrapPass on _Z7computei (16 instructions)
+Running pass: SimplifyCFGPass on _Z7computei (16 instructions)
+Running pass: ReassociatePass on _Z7computei (16 instructions)
+Running pass: LoopSimplifyPass on _Z7computei (16 instructions)
+Running pass: LCSSAPass on _Z7computei (16 instructions)
+Running pass: LoopInstSimplifyPass on loop %<unnamed loop> in function _Z7computei
+Running pass: LoopSimplifyCFGPass on loop %<unnamed loop> in function _Z7computei
+Running pass: LICMPass on loop %<unnamed loop> in function _Z7computei
+Running pass: LoopRotatePass on loop %<unnamed loop> in function _Z7computei
+Running pass: LICMPass on loop %<unnamed loop> in function _Z7computei
+Running pass: SimpleLoopUnswitchPass on loop %<unnamed loop> in function _Z7computei
+Running pass: SimplifyCFGPass on _Z7computei (17 instructions)
+Running pass: InstCombinePass on _Z7computei (17 instructions)
+Running pass: LoopSimplifyPass on _Z7computei (16 instructions)
+Running pass: LCSSAPass on _Z7computei (16 instructions)
+Running pass: LoopIdiomRecognizePass on loop %<unnamed loop> in function _Z7computei
+Running pass: IndVarSimplifyPass on loop %<unnamed loop> in function _Z7computei
+Running pass: LoopDeletionPass on loop %<unnamed loop> in function _Z7computei
+Running pass: LoopFullUnrollPass on loop %<unnamed loop> in function _Z7computei
+Running pass: SROAPass on _Z7computei (17 instructions)
+Running pass: MemCpyOptPass on _Z7computei (17 instructions)
+Running pass: SCCPPass on _Z7computei (17 instructions)
+Running pass: BDCEPass on _Z7computei (17 instructions)
+Running pass: InstCombinePass on _Z7computei (17 instructions)
+Running pass: CoroElidePass on _Z7computei (16 instructions)
+Running pass: ADCEPass on _Z7computei (16 instructions)
+Running pass: SimplifyCFGPass on _Z7computei (16 instructions)
+Running pass: InstCombinePass on _Z7computei (16 instructions)
+Running pass: PostOrderFunctionAttrsPass on (_Z7computei) (1 node)
+Running pass: RequireAnalysisPass<ShouldNotRunFunctionPassesAnalysis, Function> on _Z7computei (16 instructions)
+Running pass: CoroSplitPass on (_Z7computei) (1 node)
+Running pass: CoroAnnotationElidePass on (_Z7computei) (1 node)
+Running pass: DevirtSCCRepeatedPass on (_Z12processArrayRSt6vectorIiSaIiEE) (1 node)
+Running pass: InlinerPass on (_Z12processArrayRSt6vectorIiSaIiEE) (1 node)
+Running pass: PostOrderFunctionAttrsPass on (_Z12processArrayRSt6vectorIiSaIiEE) (1 node)
+Running pass: SROAPass on _Z12processArrayRSt6vectorIiSaIiEE (41 instructions)
+Running pass: EarlyCSEPass on _Z12processArrayRSt6vectorIiSaIiEE (41 instructions)
+Running pass: SimplifyCFGPass on _Z12processArrayRSt6vectorIiSaIiEE (41 instructions)
+Running pass: InstCombinePass on _Z12processArrayRSt6vectorIiSaIiEE (41 instructions)
+Running pass: LibCallsShrinkWrapPass on _Z12processArrayRSt6vectorIiSaIiEE (41 instructions)
+Running pass: SimplifyCFGPass on _Z12processArrayRSt6vectorIiSaIiEE (41 instructions)
+Running pass: ReassociatePass on _Z12processArrayRSt6vectorIiSaIiEE (41 instructions)
+Running pass: LoopSimplifyPass on _Z12processArrayRSt6vectorIiSaIiEE (41 instructions)
+Running pass: LCSSAPass on _Z12processArrayRSt6vectorIiSaIiEE (42 instructions)
+Running pass: LoopInstSimplifyPass on loop %<unnamed loop> in function _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: LoopSimplifyCFGPass on loop %<unnamed loop> in function _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: LICMPass on loop %<unnamed loop> in function _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: LoopRotatePass on loop %<unnamed loop> in function _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: LICMPass on loop %<unnamed loop> in function _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: SimpleLoopUnswitchPass on loop %<unnamed loop> in function _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: LoopInstSimplifyPass on loop %<unnamed loop> in function _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: LoopSimplifyCFGPass on loop %<unnamed loop> in function _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: LICMPass on loop %<unnamed loop> in function _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: LoopRotatePass on loop %<unnamed loop> in function _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: LICMPass on loop %<unnamed loop> in function _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: SimpleLoopUnswitchPass on loop %<unnamed loop> in function _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: SimplifyCFGPass on _Z12processArrayRSt6vectorIiSaIiEE (44 instructions)
+Running pass: InstCombinePass on _Z12processArrayRSt6vectorIiSaIiEE (42 instructions)
+Running pass: LoopSimplifyPass on _Z12processArrayRSt6vectorIiSaIiEE (41 instructions)
+Running pass: LCSSAPass on _Z12processArrayRSt6vectorIiSaIiEE (42 instructions)
+Running pass: LoopIdiomRecognizePass on loop %<unnamed loop> in function _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: IndVarSimplifyPass on loop %<unnamed loop> in function _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: LoopDeletionPass on loop %<unnamed loop> in function _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: LoopFullUnrollPass on loop %<unnamed loop> in function _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: LoopIdiomRecognizePass on loop %<unnamed loop> in function _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: IndVarSimplifyPass on loop %<unnamed loop> in function _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: LoopDeletionPass on loop %<unnamed loop> in function _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: LoopFullUnrollPass on loop %<unnamed loop> in function _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: SROAPass on _Z12processArrayRSt6vectorIiSaIiEE (44 instructions)
+Running pass: MemCpyOptPass on _Z12processArrayRSt6vectorIiSaIiEE (44 instructions)
+Running pass: SCCPPass on _Z12processArrayRSt6vectorIiSaIiEE (44 instructions)
+Running pass: BDCEPass on _Z12processArrayRSt6vectorIiSaIiEE (44 instructions)
+Running pass: InstCombinePass on _Z12processArrayRSt6vectorIiSaIiEE (44 instructions)
+Running pass: CoroElidePass on _Z12processArrayRSt6vectorIiSaIiEE (42 instructions)
+Running pass: ADCEPass on _Z12processArrayRSt6vectorIiSaIiEE (42 instructions)
+Running pass: SimplifyCFGPass on _Z12processArrayRSt6vectorIiSaIiEE (42 instructions)
+Running pass: InstCombinePass on _Z12processArrayRSt6vectorIiSaIiEE (41 instructions)
+Running pass: PostOrderFunctionAttrsPass on (_Z12processArrayRSt6vectorIiSaIiEE) (1 node)
+Running pass: RequireAnalysisPass<ShouldNotRunFunctionPassesAnalysis, Function> on _Z12processArrayRSt6vectorIiSaIiEE (41 instructions)
+Running pass: CoroSplitPass on (_Z12processArrayRSt6vectorIiSaIiEE) (1 node)
+Running pass: CoroAnnotationElidePass on (_Z12processArrayRSt6vectorIiSaIiEE) (1 node)
+Running pass: DevirtSCCRepeatedPass on (main) (1 node)
+Running pass: InlinerPass on (main) (1 node)
+Running pass: PostOrderFunctionAttrsPass on (main) (1 node)
+Running pass: SROAPass on main (137 instructions)
+Running pass: EarlyCSEPass on main (137 instructions)
+Running pass: SimplifyCFGPass on main (137 instructions)
+Running pass: InstCombinePass on main (137 instructions)
+Running pass: LibCallsShrinkWrapPass on main (137 instructions)
+Running pass: SimplifyCFGPass on main (137 instructions)
+Running pass: ReassociatePass on main (137 instructions)
+Running pass: LoopSimplifyPass on main (137 instructions)
+Running pass: LCSSAPass on main (138 instructions)
+Running pass: LoopInstSimplifyPass on loop %<unnamed loop> in function main
+Running pass: LoopSimplifyCFGPass on loop %<unnamed loop> in function main
+Running pass: LICMPass on loop %<unnamed loop> in function main
+Running pass: LoopRotatePass on loop %<unnamed loop> in function main
+Running pass: LICMPass on loop %<unnamed loop> in function main
+Running pass: SimpleLoopUnswitchPass on loop %<unnamed loop> in function main
+Running pass: LoopInstSimplifyPass on loop %<unnamed loop> in function main
+Running pass: LoopSimplifyCFGPass on loop %<unnamed loop> in function main
+Running pass: LICMPass on loop %<unnamed loop> in function main
+Running pass: LoopRotatePass on loop %<unnamed loop> in function main
+Running pass: LICMPass on loop %<unnamed loop> in function main
+Running pass: SimpleLoopUnswitchPass on loop %<unnamed loop> in function main
+Running pass: LoopInstSimplifyPass on loop %<unnamed loop> in function main
+Running pass: LoopSimplifyCFGPass on loop %<unnamed loop> in function main
+Running pass: LICMPass on loop %<unnamed loop> in function main
+Running pass: LoopRotatePass on loop %<unnamed loop> in function main
+Running pass: LICMPass on loop %<unnamed loop> in function main
+Running pass: SimpleLoopUnswitchPass on loop %<unnamed loop> in function main
+Running pass: SimplifyCFGPass on main (147 instructions)
+Running pass: InstCombinePass on main (145 instructions)
+Running pass: LoopSimplifyPass on main (137 instructions)
+Running pass: LCSSAPass on main (138 instructions)
+Running pass: LoopIdiomRecognizePass on loop %<unnamed loop> in function main
+Running pass: IndVarSimplifyPass on loop %<unnamed loop> in function main
+Running pass: LoopDeletionPass on loop %<unnamed loop> in function main
+Running pass: LoopFullUnrollPass on loop %<unnamed loop> in function main
+Running pass: LoopIdiomRecognizePass on loop %<unnamed loop> in function main
+Running pass: IndVarSimplifyPass on loop %<unnamed loop> in function main
+Running pass: LoopDeletionPass on loop %<unnamed loop> in function main
+Running pass: LoopFullUnrollPass on loop %<unnamed loop> in function main
+Running pass: LoopIdiomRecognizePass on loop %<unnamed loop> in function main
+Running pass: IndVarSimplifyPass on loop %<unnamed loop> in function main
+Running pass: LoopDeletionPass on loop %<unnamed loop> in function main
+Running pass: LoopFullUnrollPass on loop %<unnamed loop> in function main
+Running pass: SROAPass on main (147 instructions)
+Running pass: MemCpyOptPass on main (147 instructions)
+Running pass: SCCPPass on main (147 instructions)
+Running pass: BDCEPass on main (147 instructions)
+Running pass: InstCombinePass on main (147 instructions)
+Running pass: CoroElidePass on main (138 instructions)
+Running pass: ADCEPass on main (138 instructions)
+Running pass: SimplifyCFGPass on main (138 instructions)
+Running pass: InstCombinePass on main (137 instructions)
+Running pass: PostOrderFunctionAttrsPass on (main) (1 node)
+Running pass: RequireAnalysisPass<ShouldNotRunFunctionPassesAnalysis, Function> on main (137 instructions)
+Running pass: CoroSplitPass on (main) (1 node)
+Running pass: CoroAnnotationElidePass on (main) (1 node)
+Running pass: InvalidateAnalysisPass<ShouldNotRunFunctionPassesAnalysis> on _Z7computei (16 instructions)
+Running pass: InvalidateAnalysisPass<ShouldNotRunFunctionPassesAnalysis> on _Z12processArrayRSt6vectorIiSaIiEE (41 instructions)
+Running pass: InvalidateAnalysisPass<ShouldNotRunFunctionPassesAnalysis> on main (137 instructions)
+Running pass: DeadArgumentEliminationPass on [module]
+Running pass: CoroCleanupPass on [module]
+Running pass: GlobalOptPass on [module]
+Running pass: GlobalDCEPass on [module]
+Running pass: EliminateAvailableExternallyPass on [module]
+Running pass: ReversePostOrderFunctionAttrsPass on [module]
+Running pass: RecomputeGlobalsAAPass on [module]
+Running pass: DropUnnecessaryAssumesPass on _Z7computei (16 instructions)
+Running pass: Float2IntPass on _Z7computei (16 instructions)
+Running pass: LowerConstantIntrinsicsPass on _Z7computei (16 instructions)
+Running pass: LoopSimplifyPass on _Z7computei (16 instructions)
+Running pass: LCSSAPass on _Z7computei (16 instructions)
+Running pass: LoopRotatePass on loop %<unnamed loop> in function _Z7computei
+Running pass: LoopDeletionPass on loop %<unnamed loop> in function _Z7computei
+Running pass: LoopDistributePass on _Z7computei (17 instructions)
+Running pass: InjectTLIMappings on _Z7computei (17 instructions)
+Running pass: LoopVectorizePass on _Z7computei (17 instructions)
+Running pass: DropUnnecessaryAssumesPass on _Z7computei (17 instructions)
+Running pass: InferAlignmentPass on _Z7computei (17 instructions)
+Running pass: LoopLoadEliminationPass on _Z7computei (17 instructions)
+Running pass: InstCombinePass on _Z7computei (17 instructions)
+Running pass: SimplifyCFGPass on _Z7computei (16 instructions)
+Running pass: VectorCombinePass on _Z7computei (16 instructions)
+Running pass: InstCombinePass on _Z7computei (16 instructions)
+Running pass: LoopUnrollPass on _Z7computei (16 instructions)
+Running pass: WarnMissedTransformationsPass on _Z7computei (17 instructions)
+Running pass: SROAPass on _Z7computei (17 instructions)
+Running pass: InferAlignmentPass on _Z7computei (17 instructions)
+Running pass: InstCombinePass on _Z7computei (17 instructions)
+Running pass: LoopSimplifyPass on _Z7computei (16 instructions)
+Running pass: LCSSAPass on _Z7computei (16 instructions)
+Running pass: LICMPass on loop %<unnamed loop> in function _Z7computei
+Running pass: AlignmentFromAssumptionsPass on _Z7computei (17 instructions)
+Running pass: LoopSinkPass on _Z7computei (17 instructions)
+Running pass: InstSimplifyPass on _Z7computei (17 instructions)
+Running pass: DivRemPairsPass on _Z7computei (16 instructions)
+Running pass: MergeICmpsPass on _Z7computei (16 instructions)
+Running pass: ExpandMemCmpPass on _Z7computei (16 instructions)
+Running pass: TailCallElimPass on _Z7computei (16 instructions)
+Running pass: SimplifyCFGPass on _Z7computei (16 instructions)
+Running pass: DropUnnecessaryAssumesPass on _Z12processArrayRSt6vectorIiSaIiEE (41 instructions)
+Running pass: Float2IntPass on _Z12processArrayRSt6vectorIiSaIiEE (41 instructions)
+Running pass: LowerConstantIntrinsicsPass on _Z12processArrayRSt6vectorIiSaIiEE (41 instructions)
+Running pass: LoopSimplifyPass on _Z12processArrayRSt6vectorIiSaIiEE (41 instructions)
+Running pass: LCSSAPass on _Z12processArrayRSt6vectorIiSaIiEE (42 instructions)
+Running pass: LoopRotatePass on loop %<unnamed loop> in function _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: LoopDeletionPass on loop %<unnamed loop> in function _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: LoopRotatePass on loop %<unnamed loop> in function _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: LoopDeletionPass on loop %<unnamed loop> in function _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: LoopDistributePass on _Z12processArrayRSt6vectorIiSaIiEE (44 instructions)
+Running pass: InjectTLIMappings on _Z12processArrayRSt6vectorIiSaIiEE (44 instructions)
+Running pass: LoopVectorizePass on _Z12processArrayRSt6vectorIiSaIiEE (44 instructions)
+Running pass: DropUnnecessaryAssumesPass on _Z12processArrayRSt6vectorIiSaIiEE (44 instructions)
+Running pass: InferAlignmentPass on _Z12processArrayRSt6vectorIiSaIiEE (44 instructions)
+Running pass: LoopLoadEliminationPass on _Z12processArrayRSt6vectorIiSaIiEE (44 instructions)
+Running pass: InstCombinePass on _Z12processArrayRSt6vectorIiSaIiEE (44 instructions)
+Running pass: SimplifyCFGPass on _Z12processArrayRSt6vectorIiSaIiEE (42 instructions)
+Running pass: VectorCombinePass on _Z12processArrayRSt6vectorIiSaIiEE (41 instructions)
+Running pass: InstCombinePass on _Z12processArrayRSt6vectorIiSaIiEE (41 instructions)
+Running pass: LoopUnrollPass on _Z12processArrayRSt6vectorIiSaIiEE (41 instructions)
+Running pass: WarnMissedTransformationsPass on _Z12processArrayRSt6vectorIiSaIiEE (44 instructions)
+Running pass: SROAPass on _Z12processArrayRSt6vectorIiSaIiEE (44 instructions)
+Running pass: InferAlignmentPass on _Z12processArrayRSt6vectorIiSaIiEE (44 instructions)
+Running pass: InstCombinePass on _Z12processArrayRSt6vectorIiSaIiEE (44 instructions)
+Running pass: LoopSimplifyPass on _Z12processArrayRSt6vectorIiSaIiEE (42 instructions)
+Running pass: LCSSAPass on _Z12processArrayRSt6vectorIiSaIiEE (42 instructions)
+Running pass: LICMPass on loop %<unnamed loop> in function _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: LICMPass on loop %<unnamed loop> in function _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: AlignmentFromAssumptionsPass on _Z12processArrayRSt6vectorIiSaIiEE (44 instructions)
+Running pass: LoopSinkPass on _Z12processArrayRSt6vectorIiSaIiEE (44 instructions)
+Running pass: InstSimplifyPass on _Z12processArrayRSt6vectorIiSaIiEE (44 instructions)
+Running pass: DivRemPairsPass on _Z12processArrayRSt6vectorIiSaIiEE (42 instructions)
+Running pass: MergeICmpsPass on _Z12processArrayRSt6vectorIiSaIiEE (42 instructions)
+Running pass: ExpandMemCmpPass on _Z12processArrayRSt6vectorIiSaIiEE (42 instructions)
+Running pass: TailCallElimPass on _Z12processArrayRSt6vectorIiSaIiEE (42 instructions)
+Running pass: SimplifyCFGPass on _Z12processArrayRSt6vectorIiSaIiEE (42 instructions)
+Running pass: DropUnnecessaryAssumesPass on main (137 instructions)
+Running pass: Float2IntPass on main (137 instructions)
+Running pass: LowerConstantIntrinsicsPass on main (137 instructions)
+Running pass: LoopSimplifyPass on main (137 instructions)
+Running pass: LCSSAPass on main (138 instructions)
+Running pass: LoopRotatePass on loop %<unnamed loop> in function main
+Running pass: LoopDeletionPass on loop %<unnamed loop> in function main
+Running pass: LoopRotatePass on loop %<unnamed loop> in function main
+Running pass: LoopDeletionPass on loop %<unnamed loop> in function main
+Running pass: LoopRotatePass on loop %<unnamed loop> in function main
+Running pass: LoopDeletionPass on loop %<unnamed loop> in function main
+Running pass: LoopDistributePass on main (147 instructions)
+Running pass: InjectTLIMappings on main (147 instructions)
+Running pass: LoopVectorizePass on main (147 instructions)
+Running pass: DropUnnecessaryAssumesPass on main (147 instructions)
+Running pass: InferAlignmentPass on main (147 instructions)
+Running pass: LoopLoadEliminationPass on main (147 instructions)
+Running pass: InstCombinePass on main (147 instructions)
+Running pass: SimplifyCFGPass on main (138 instructions)
+Running pass: VectorCombinePass on main (137 instructions)
+Running pass: InstCombinePass on main (137 instructions)
+Running pass: LoopUnrollPass on main (137 instructions)
+Running pass: WarnMissedTransformationsPass on main (147 instructions)
+Running pass: SROAPass on main (147 instructions)
+Running pass: InferAlignmentPass on main (147 instructions)
+Running pass: InstCombinePass on main (147 instructions)
+Running pass: LoopSimplifyPass on main (138 instructions)
+Running pass: LCSSAPass on main (138 instructions)
+Running pass: LICMPass on loop %<unnamed loop> in function main
+Running pass: LICMPass on loop %<unnamed loop> in function main
+Running pass: LICMPass on loop %<unnamed loop> in function main
+Running pass: AlignmentFromAssumptionsPass on main (147 instructions)
+Running pass: LoopSinkPass on main (147 instructions)
+Running pass: InstSimplifyPass on main (147 instructions)
+Running pass: DivRemPairsPass on main (138 instructions)
+Running pass: MergeICmpsPass on main (138 instructions)
+Running pass: ExpandMemCmpPass on main (138 instructions)
+Running pass: TailCallElimPass on main (138 instructions)
+Running pass: SimplifyCFGPass on main (138 instructions)
+Running pass: AllocTokenPass on [module]
+Running pass: GlobalDCEPass on [module]
+Running pass: ConstantMergePass on [module]
+Running pass: CGProfilePass on [module]
+Running pass: RelLookupTableConverterPass on [module]
+Running pass: AnnotationRemarksPass on _Z7computei (16 instructions)
+Running pass: AnnotationRemarksPass on _Z12processArrayRSt6vectorIiSaIiEE (41 instructions)
+Running pass: AnnotationRemarksPass on main (137 instructions)
+Running pass: VerifierPass on [module]

@@ -1,0 +1,763 @@
+Running pass: MemProfRemoveInfo on [module]
+Running pass: Annotation2MetadataPass on [module]
+Running pass: ForceFunctionAttrsPass on [module]
+Running pass: InferFunctionAttrsPass on [module]
+Running analysis: InnerAnalysisManagerProxy<AnalysisManager<Function>, Module> on [module]
+Running analysis: TargetLibraryAnalysis on __gxx_personality_v0
+Running analysis: TargetLibraryAnalysis on _ZNSolsEi
+Running analysis: TargetLibraryAnalysis on _ZSt20__throw_length_errorPKc
+Running analysis: TargetLibraryAnalysis on llvm.memmove.p0.p0.i64
+Running analysis: TargetLibraryAnalysis on _ZSt16__ostream_insertIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_PKS3_l
+Running analysis: TargetLibraryAnalysis on _ZNSo3putEc
+Running analysis: TargetLibraryAnalysis on _ZNSo5flushEv
+Running analysis: TargetLibraryAnalysis on _ZSt16__throw_bad_castv
+Running analysis: TargetLibraryAnalysis on _ZNKSt5ctypeIcE13_M_widen_initEv
+Running analysis: TargetLibraryAnalysis on llvm.umax.i64
+Running analysis: TargetLibraryAnalysis on llvm.umin.i64
+Running analysis: TargetLibraryAnalysis on llvm.assume
+Invalidating analysis: InnerAnalysisManagerProxy<AnalysisManager<Function>, Module> on [module]
+Running pass: CoroEarlyPass on [module]
+Running analysis: InnerAnalysisManagerProxy<AnalysisManager<Function>, Module> on [module]
+Running pass: EntryExitInstrumenterPass on _Z7computei (16 instructions)
+Running pass: LowerExpectIntrinsicPass on _Z7computei (16 instructions)
+Running pass: SimplifyCFGPass on _Z7computei (16 instructions)
+Running analysis: TargetIRAnalysis on _Z7computei
+Running analysis: AssumptionAnalysis on _Z7computei
+Running pass: SROAPass on _Z7computei (16 instructions)
+Running analysis: DominatorTreeAnalysis on _Z7computei
+Running pass: EarlyCSEPass on _Z7computei (16 instructions)
+Running analysis: TargetLibraryAnalysis on _Z7computei
+Invalidating analysis: DominatorTreeAnalysis on _Z7computei
+Running pass: EntryExitInstrumenterPass on _Z12processArrayRSt6vectorIiSaIiEE (41 instructions)
+Running pass: LowerExpectIntrinsicPass on _Z12processArrayRSt6vectorIiSaIiEE (41 instructions)
+Running pass: SimplifyCFGPass on _Z12processArrayRSt6vectorIiSaIiEE (41 instructions)
+Running analysis: TargetIRAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Running analysis: AssumptionAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: SROAPass on _Z12processArrayRSt6vectorIiSaIiEE (41 instructions)
+Running analysis: DominatorTreeAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: EarlyCSEPass on _Z12processArrayRSt6vectorIiSaIiEE (41 instructions)
+Running analysis: TargetLibraryAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Invalidating analysis: DominatorTreeAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: EntryExitInstrumenterPass on main (135 instructions)
+Running pass: LowerExpectIntrinsicPass on main (135 instructions)
+Running pass: SimplifyCFGPass on main (135 instructions)
+Running analysis: TargetIRAnalysis on main
+Running analysis: AssumptionAnalysis on main
+Running pass: SROAPass on main (135 instructions)
+Running analysis: DominatorTreeAnalysis on main
+Running pass: EarlyCSEPass on main (135 instructions)
+Running analysis: TargetLibraryAnalysis on main
+Invalidating analysis: DominatorTreeAnalysis on main
+Running pass: OpenMPOptPass on [module]
+Running pass: IPSCCPPass on [module]
+Running analysis: DominatorTreeAnalysis on _Z7computei
+Running analysis: DominatorTreeAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Running analysis: DominatorTreeAnalysis on main
+Running pass: CalledValuePropagationPass on [module]
+Running pass: GlobalOptPass on [module]
+Running pass: PromotePass on _Z7computei (16 instructions)
+Running pass: InstCombinePass on _Z7computei (16 instructions)
+Running analysis: LastRunTrackingAnalysis on _Z7computei
+Running analysis: OptimizationRemarkEmitterAnalysis on _Z7computei
+Running analysis: AAManager on _Z7computei
+Running analysis: BasicAA on _Z7computei
+Running analysis: ScopedNoAliasAA on _Z7computei
+Running analysis: TypeBasedAA on _Z7computei
+Running analysis: OuterAnalysisManagerProxy<AnalysisManager<Module>, Function> on _Z7computei
+Running pass: SimplifyCFGPass on _Z7computei (16 instructions)
+Invalidating analysis: DominatorTreeAnalysis on _Z7computei
+Invalidating analysis: LastRunTrackingAnalysis on _Z7computei
+Invalidating analysis: BasicAA on _Z7computei
+Invalidating analysis: AAManager on _Z7computei
+Running pass: PromotePass on _Z12processArrayRSt6vectorIiSaIiEE (41 instructions)
+Running pass: InstCombinePass on _Z12processArrayRSt6vectorIiSaIiEE (41 instructions)
+Running analysis: LastRunTrackingAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Running analysis: OptimizationRemarkEmitterAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Running analysis: AAManager on _Z12processArrayRSt6vectorIiSaIiEE
+Running analysis: BasicAA on _Z12processArrayRSt6vectorIiSaIiEE
+Running analysis: ScopedNoAliasAA on _Z12processArrayRSt6vectorIiSaIiEE
+Running analysis: TypeBasedAA on _Z12processArrayRSt6vectorIiSaIiEE
+Running analysis: OuterAnalysisManagerProxy<AnalysisManager<Module>, Function> on _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: SimplifyCFGPass on _Z12processArrayRSt6vectorIiSaIiEE (41 instructions)
+Invalidating analysis: DominatorTreeAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Invalidating analysis: LastRunTrackingAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Invalidating analysis: BasicAA on _Z12processArrayRSt6vectorIiSaIiEE
+Invalidating analysis: AAManager on _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: PromotePass on main (135 instructions)
+Running pass: InstCombinePass on main (135 instructions)
+Running analysis: LastRunTrackingAnalysis on main
+Running analysis: OptimizationRemarkEmitterAnalysis on main
+Running analysis: AAManager on main
+Running analysis: BasicAA on main
+Running analysis: ScopedNoAliasAA on main
+Running analysis: TypeBasedAA on main
+Running analysis: OuterAnalysisManagerProxy<AnalysisManager<Module>, Function> on main
+Running pass: SimplifyCFGPass on main (135 instructions)
+Invalidating analysis: DominatorTreeAnalysis on main
+Invalidating analysis: LastRunTrackingAnalysis on main
+Invalidating analysis: BasicAA on main
+Invalidating analysis: AAManager on main
+Running pass: AlwaysInlinerPass on [module]
+Running analysis: ProfileSummaryAnalysis on [module]
+Running pass: ModuleInlinerWrapperPass on [module]
+Running analysis: InlineAdvisorAnalysis on [module]
+Running pass: RequireAnalysisPass<GlobalsAA, Module> on [module]
+Running analysis: GlobalsAA on [module]
+Running analysis: CallGraphAnalysis on [module]
+Running pass: InvalidateAnalysisPass<AAManager> on _Z7computei (16 instructions)
+Running pass: InvalidateAnalysisPass<AAManager> on _Z12processArrayRSt6vectorIiSaIiEE (41 instructions)
+Running pass: InvalidateAnalysisPass<AAManager> on main (135 instructions)
+Running pass: RequireAnalysisPass<ProfileSummaryAnalysis, Module> on [module]
+Running analysis: InnerAnalysisManagerProxy<AnalysisManager<LazyCallGraph::SCC, LazyCallGraph&>, Module> on [module]
+Running analysis: LazyCallGraphAnalysis on [module]
+Running analysis: FunctionAnalysisManagerCGSCCProxy on (_Z7computei)
+Running analysis: OuterAnalysisManagerProxy<AnalysisManager<Module>, LazyCallGraph::SCC, LazyCallGraph&> on (_Z7computei)
+Running pass: DevirtSCCRepeatedPass on (_Z7computei) (1 node)
+Running pass: InlinerPass on (_Z7computei) (1 node)
+Running pass: PostOrderFunctionAttrsPass on (_Z7computei) (1 node)
+Running pass: OpenMPOptCGSCCPass on (_Z7computei) (1 node)
+Running pass: SROAPass on _Z7computei (16 instructions)
+Running analysis: DominatorTreeAnalysis on _Z7computei
+Running pass: EarlyCSEPass on _Z7computei (16 instructions)
+Running analysis: MemorySSAAnalysis on _Z7computei
+Running analysis: AAManager on _Z7computei
+Running analysis: BasicAA on _Z7computei
+Running pass: SpeculativeExecutionPass on _Z7computei (16 instructions)
+Running pass: JumpThreadingPass on _Z7computei (16 instructions)
+Running analysis: LazyValueAnalysis on _Z7computei
+Running pass: CorrelatedValuePropagationPass on _Z7computei (16 instructions)
+Invalidating analysis: LazyValueAnalysis on _Z7computei
+Running pass: JumpTableToSwitchPass on _Z7computei (16 instructions)
+Running pass: SimplifyCFGPass on _Z7computei (16 instructions)
+Running pass: InstCombinePass on _Z7computei (16 instructions)
+Running analysis: LastRunTrackingAnalysis on _Z7computei
+Running pass: AggressiveInstCombinePass on _Z7computei (16 instructions)
+Running pass: LibCallsShrinkWrapPass on _Z7computei (16 instructions)
+Running pass: TailCallElimPass on _Z7computei (16 instructions)
+Running pass: SimplifyCFGPass on _Z7computei (16 instructions)
+Running pass: ReassociatePass on _Z7computei (16 instructions)
+Invalidating analysis: MemorySSAAnalysis on _Z7computei
+Invalidating analysis: LastRunTrackingAnalysis on _Z7computei
+Running pass: ConstraintEliminationPass on _Z7computei (16 instructions)
+Running analysis: LoopAnalysis on _Z7computei
+Running analysis: ScalarEvolutionAnalysis on _Z7computei
+Running pass: LoopSimplifyPass on _Z7computei (16 instructions)
+Running pass: LCSSAPass on _Z7computei (16 instructions)
+Running analysis: MemorySSAAnalysis on _Z7computei
+Running analysis: InnerAnalysisManagerProxy<AnalysisManager<Loop, LoopStandardAnalysisResults&>, Function> on _Z7computei
+Running pass: LoopInstSimplifyPass on loop %<unnamed loop> in function _Z7computei
+Running pass: LoopSimplifyCFGPass on loop %<unnamed loop> in function _Z7computei
+Running pass: LICMPass on loop %<unnamed loop> in function _Z7computei
+Running pass: LoopRotatePass on loop %<unnamed loop> in function _Z7computei
+Running pass: LICMPass on loop %<unnamed loop> in function _Z7computei
+Running pass: SimpleLoopUnswitchPass on loop %<unnamed loop> in function _Z7computei
+Running pass: SimplifyCFGPass on _Z7computei (17 instructions)
+Running pass: InstCombinePass on _Z7computei (17 instructions)
+Running analysis: LastRunTrackingAnalysis on _Z7computei
+Clearing all analysis results for: <possibly invalidated loop>
+Invalidating analysis: ScalarEvolutionAnalysis on _Z7computei
+Invalidating analysis: MemorySSAAnalysis on _Z7computei
+Invalidating analysis: InnerAnalysisManagerProxy<AnalysisManager<Loop, LoopStandardAnalysisResults&>, Function> on _Z7computei
+Running pass: LoopSimplifyPass on _Z7computei (16 instructions)
+Running pass: LCSSAPass on _Z7computei (16 instructions)
+Invalidating analysis: LastRunTrackingAnalysis on _Z7computei
+Running analysis: ScalarEvolutionAnalysis on _Z7computei
+Running analysis: InnerAnalysisManagerProxy<AnalysisManager<Loop, LoopStandardAnalysisResults&>, Function> on _Z7computei
+Running pass: LoopIdiomRecognizePass on loop %<unnamed loop> in function _Z7computei
+Running pass: IndVarSimplifyPass on loop %<unnamed loop> in function _Z7computei
+Running pass: LoopDeletionPass on loop %<unnamed loop> in function _Z7computei
+Running pass: LoopFullUnrollPass on loop %<unnamed loop> in function _Z7computei
+Running pass: SROAPass on _Z7computei (17 instructions)
+Running pass: VectorCombinePass on _Z7computei (17 instructions)
+Running pass: MergedLoadStoreMotionPass on _Z7computei (17 instructions)
+Running pass: GVNPass on _Z7computei (17 instructions)
+Running analysis: MemoryDependenceAnalysis on _Z7computei
+Clearing all analysis results for: <possibly invalidated loop>
+Invalidating analysis: ScalarEvolutionAnalysis on _Z7computei
+Invalidating analysis: InnerAnalysisManagerProxy<AnalysisManager<Loop, LoopStandardAnalysisResults&>, Function> on _Z7computei
+Invalidating analysis: MemoryDependenceAnalysis on _Z7computei
+Running pass: SCCPPass on _Z7computei (16 instructions)
+Running pass: BDCEPass on _Z7computei (16 instructions)
+Running analysis: DemandedBitsAnalysis on _Z7computei
+Running pass: InstCombinePass on _Z7computei (16 instructions)
+Running analysis: LastRunTrackingAnalysis on _Z7computei
+Running pass: JumpThreadingPass on _Z7computei (16 instructions)
+Running analysis: LazyValueAnalysis on _Z7computei
+Running pass: CorrelatedValuePropagationPass on _Z7computei (16 instructions)
+Invalidating analysis: LazyValueAnalysis on _Z7computei
+Running pass: ADCEPass on _Z7computei (16 instructions)
+Running analysis: PostDominatorTreeAnalysis on _Z7computei
+Running pass: MemCpyOptPass on _Z7computei (16 instructions)
+Running analysis: MemorySSAAnalysis on _Z7computei
+Running pass: DSEPass on _Z7computei (16 instructions)
+Running analysis: CycleAnalysis on _Z7computei
+Running pass: MoveAutoInitPass on _Z7computei (16 instructions)
+Running pass: LoopSimplifyPass on _Z7computei (16 instructions)
+Running pass: LCSSAPass on _Z7computei (16 instructions)
+Invalidating analysis: DemandedBitsAnalysis on _Z7computei
+Invalidating analysis: LastRunTrackingAnalysis on _Z7computei
+Invalidating analysis: CycleAnalysis on _Z7computei
+Running analysis: ScalarEvolutionAnalysis on _Z7computei
+Running analysis: InnerAnalysisManagerProxy<AnalysisManager<Loop, LoopStandardAnalysisResults&>, Function> on _Z7computei
+Running pass: LICMPass on loop %<unnamed loop> in function _Z7computei
+Running pass: CoroElidePass on _Z7computei (17 instructions)
+Running pass: SimplifyCFGPass on _Z7computei (17 instructions)
+Running pass: InstCombinePass on _Z7computei (17 instructions)
+Running analysis: LastRunTrackingAnalysis on _Z7computei
+Invalidating analysis: MemorySSAAnalysis on _Z7computei
+Invalidating analysis: ScalarEvolutionAnalysis on _Z7computei
+Invalidating analysis: InnerAnalysisManagerProxy<AnalysisManager<Loop, LoopStandardAnalysisResults&>, Function> on _Z7computei
+Invalidating analysis: DominatorTreeAnalysis on _Z7computei
+Invalidating analysis: BasicAA on _Z7computei
+Invalidating analysis: AAManager on _Z7computei
+Invalidating analysis: LoopAnalysis on _Z7computei
+Invalidating analysis: PostDominatorTreeAnalysis on _Z7computei
+Invalidating analysis: LastRunTrackingAnalysis on _Z7computei
+Running pass: PostOrderFunctionAttrsPass on (_Z7computei) (1 node)
+Running analysis: AAManager on _Z7computei
+Running analysis: BasicAA on _Z7computei
+Running analysis: DominatorTreeAnalysis on _Z7computei
+Running pass: RequireAnalysisPass<ShouldNotRunFunctionPassesAnalysis, Function> on _Z7computei (16 instructions)
+Running analysis: ShouldNotRunFunctionPassesAnalysis on _Z7computei
+Running pass: CoroSplitPass on (_Z7computei) (1 node)
+Running pass: CoroAnnotationElidePass on (_Z7computei) (1 node)
+Running analysis: FunctionAnalysisManagerCGSCCProxy on (_Z12processArrayRSt6vectorIiSaIiEE)
+Running analysis: OuterAnalysisManagerProxy<AnalysisManager<Module>, LazyCallGraph::SCC, LazyCallGraph&> on (_Z12processArrayRSt6vectorIiSaIiEE)
+Running pass: DevirtSCCRepeatedPass on (_Z12processArrayRSt6vectorIiSaIiEE) (1 node)
+Running pass: InlinerPass on (_Z12processArrayRSt6vectorIiSaIiEE) (1 node)
+Running pass: PostOrderFunctionAttrsPass on (_Z12processArrayRSt6vectorIiSaIiEE) (1 node)
+Running pass: OpenMPOptCGSCCPass on (_Z12processArrayRSt6vectorIiSaIiEE) (1 node)
+Running pass: SROAPass on _Z12processArrayRSt6vectorIiSaIiEE (41 instructions)
+Running analysis: DominatorTreeAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: EarlyCSEPass on _Z12processArrayRSt6vectorIiSaIiEE (41 instructions)
+Running analysis: MemorySSAAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Running analysis: AAManager on _Z12processArrayRSt6vectorIiSaIiEE
+Running analysis: BasicAA on _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: SpeculativeExecutionPass on _Z12processArrayRSt6vectorIiSaIiEE (41 instructions)
+Running pass: JumpThreadingPass on _Z12processArrayRSt6vectorIiSaIiEE (41 instructions)
+Running analysis: LazyValueAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: CorrelatedValuePropagationPass on _Z12processArrayRSt6vectorIiSaIiEE (41 instructions)
+Invalidating analysis: LazyValueAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: JumpTableToSwitchPass on _Z12processArrayRSt6vectorIiSaIiEE (41 instructions)
+Running pass: SimplifyCFGPass on _Z12processArrayRSt6vectorIiSaIiEE (41 instructions)
+Running pass: InstCombinePass on _Z12processArrayRSt6vectorIiSaIiEE (41 instructions)
+Running analysis: LastRunTrackingAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: AggressiveInstCombinePass on _Z12processArrayRSt6vectorIiSaIiEE (41 instructions)
+Running pass: LibCallsShrinkWrapPass on _Z12processArrayRSt6vectorIiSaIiEE (41 instructions)
+Running pass: TailCallElimPass on _Z12processArrayRSt6vectorIiSaIiEE (41 instructions)
+Running pass: SimplifyCFGPass on _Z12processArrayRSt6vectorIiSaIiEE (41 instructions)
+Running pass: ReassociatePass on _Z12processArrayRSt6vectorIiSaIiEE (41 instructions)
+Invalidating analysis: MemorySSAAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Invalidating analysis: LastRunTrackingAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: ConstraintEliminationPass on _Z12processArrayRSt6vectorIiSaIiEE (41 instructions)
+Running analysis: LoopAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Running analysis: ScalarEvolutionAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: LoopSimplifyPass on _Z12processArrayRSt6vectorIiSaIiEE (41 instructions)
+Running pass: LCSSAPass on _Z12processArrayRSt6vectorIiSaIiEE (42 instructions)
+Running analysis: MemorySSAAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Running analysis: InnerAnalysisManagerProxy<AnalysisManager<Loop, LoopStandardAnalysisResults&>, Function> on _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: LoopInstSimplifyPass on loop %<unnamed loop> in function _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: LoopSimplifyCFGPass on loop %<unnamed loop> in function _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: LICMPass on loop %<unnamed loop> in function _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: LoopRotatePass on loop %<unnamed loop> in function _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: LICMPass on loop %<unnamed loop> in function _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: SimpleLoopUnswitchPass on loop %<unnamed loop> in function _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: LoopInstSimplifyPass on loop %<unnamed loop> in function _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: LoopSimplifyCFGPass on loop %<unnamed loop> in function _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: LICMPass on loop %<unnamed loop> in function _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: LoopRotatePass on loop %<unnamed loop> in function _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: LICMPass on loop %<unnamed loop> in function _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: SimpleLoopUnswitchPass on loop %<unnamed loop> in function _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: SimplifyCFGPass on _Z12processArrayRSt6vectorIiSaIiEE (44 instructions)
+Clearing all analysis results for: <possibly invalidated loop>
+Clearing all analysis results for: <possibly invalidated loop>
+Invalidating analysis: DominatorTreeAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Invalidating analysis: BasicAA on _Z12processArrayRSt6vectorIiSaIiEE
+Invalidating analysis: AAManager on _Z12processArrayRSt6vectorIiSaIiEE
+Invalidating analysis: LoopAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Invalidating analysis: ScalarEvolutionAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Invalidating analysis: MemorySSAAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Invalidating analysis: InnerAnalysisManagerProxy<AnalysisManager<Loop, LoopStandardAnalysisResults&>, Function> on _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: InstCombinePass on _Z12processArrayRSt6vectorIiSaIiEE (42 instructions)
+Running analysis: LastRunTrackingAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Running analysis: DominatorTreeAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Running analysis: AAManager on _Z12processArrayRSt6vectorIiSaIiEE
+Running analysis: BasicAA on _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: LoopSimplifyPass on _Z12processArrayRSt6vectorIiSaIiEE (41 instructions)
+Running analysis: LoopAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Invalidating analysis: LastRunTrackingAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: LCSSAPass on _Z12processArrayRSt6vectorIiSaIiEE (42 instructions)
+Running analysis: ScalarEvolutionAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Running analysis: InnerAnalysisManagerProxy<AnalysisManager<Loop, LoopStandardAnalysisResults&>, Function> on _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: LoopIdiomRecognizePass on loop %<unnamed loop> in function _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: IndVarSimplifyPass on loop %<unnamed loop> in function _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: LoopDeletionPass on loop %<unnamed loop> in function _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: LoopFullUnrollPass on loop %<unnamed loop> in function _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: LoopIdiomRecognizePass on loop %<unnamed loop> in function _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: IndVarSimplifyPass on loop %<unnamed loop> in function _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: LoopDeletionPass on loop %<unnamed loop> in function _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: LoopFullUnrollPass on loop %<unnamed loop> in function _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: SROAPass on _Z12processArrayRSt6vectorIiSaIiEE (44 instructions)
+Running pass: VectorCombinePass on _Z12processArrayRSt6vectorIiSaIiEE (44 instructions)
+Running pass: MergedLoadStoreMotionPass on _Z12processArrayRSt6vectorIiSaIiEE (44 instructions)
+Running pass: GVNPass on _Z12processArrayRSt6vectorIiSaIiEE (44 instructions)
+Running analysis: MemoryDependenceAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Clearing all analysis results for: <possibly invalidated loop>
+Clearing all analysis results for: <possibly invalidated loop>
+Invalidating analysis: ScalarEvolutionAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Invalidating analysis: InnerAnalysisManagerProxy<AnalysisManager<Loop, LoopStandardAnalysisResults&>, Function> on _Z12processArrayRSt6vectorIiSaIiEE
+Invalidating analysis: MemoryDependenceAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: SCCPPass on _Z12processArrayRSt6vectorIiSaIiEE (42 instructions)
+Running pass: BDCEPass on _Z12processArrayRSt6vectorIiSaIiEE (42 instructions)
+Running analysis: DemandedBitsAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: InstCombinePass on _Z12processArrayRSt6vectorIiSaIiEE (42 instructions)
+Running analysis: LastRunTrackingAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: JumpThreadingPass on _Z12processArrayRSt6vectorIiSaIiEE (42 instructions)
+Running analysis: LazyValueAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Invalidating analysis: LoopAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Invalidating analysis: DemandedBitsAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Invalidating analysis: LastRunTrackingAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: CorrelatedValuePropagationPass on _Z12processArrayRSt6vectorIiSaIiEE (41 instructions)
+Invalidating analysis: LazyValueAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: ADCEPass on _Z12processArrayRSt6vectorIiSaIiEE (41 instructions)
+Running analysis: PostDominatorTreeAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: MemCpyOptPass on _Z12processArrayRSt6vectorIiSaIiEE (41 instructions)
+Running analysis: MemorySSAAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: DSEPass on _Z12processArrayRSt6vectorIiSaIiEE (41 instructions)
+Running analysis: CycleAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: MoveAutoInitPass on _Z12processArrayRSt6vectorIiSaIiEE (41 instructions)
+Running pass: LoopSimplifyPass on _Z12processArrayRSt6vectorIiSaIiEE (41 instructions)
+Running analysis: LoopAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Invalidating analysis: PostDominatorTreeAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Invalidating analysis: CycleAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: LCSSAPass on _Z12processArrayRSt6vectorIiSaIiEE (42 instructions)
+Running analysis: ScalarEvolutionAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Running analysis: InnerAnalysisManagerProxy<AnalysisManager<Loop, LoopStandardAnalysisResults&>, Function> on _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: LICMPass on loop %<unnamed loop> in function _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: LICMPass on loop %<unnamed loop> in function _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: CoroElidePass on _Z12processArrayRSt6vectorIiSaIiEE (44 instructions)
+Running pass: SimplifyCFGPass on _Z12processArrayRSt6vectorIiSaIiEE (44 instructions)
+Invalidating analysis: DominatorTreeAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Invalidating analysis: BasicAA on _Z12processArrayRSt6vectorIiSaIiEE
+Invalidating analysis: AAManager on _Z12processArrayRSt6vectorIiSaIiEE
+Invalidating analysis: MemorySSAAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Invalidating analysis: LoopAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Invalidating analysis: ScalarEvolutionAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Invalidating analysis: InnerAnalysisManagerProxy<AnalysisManager<Loop, LoopStandardAnalysisResults&>, Function> on _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: InstCombinePass on _Z12processArrayRSt6vectorIiSaIiEE (42 instructions)
+Running analysis: LastRunTrackingAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Running analysis: DominatorTreeAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Running analysis: AAManager on _Z12processArrayRSt6vectorIiSaIiEE
+Running analysis: BasicAA on _Z12processArrayRSt6vectorIiSaIiEE
+Invalidating analysis: LastRunTrackingAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Invalidating analysis: DominatorTreeAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Invalidating analysis: BasicAA on _Z12processArrayRSt6vectorIiSaIiEE
+Invalidating analysis: AAManager on _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: PostOrderFunctionAttrsPass on (_Z12processArrayRSt6vectorIiSaIiEE) (1 node)
+Running analysis: AAManager on _Z12processArrayRSt6vectorIiSaIiEE
+Running analysis: BasicAA on _Z12processArrayRSt6vectorIiSaIiEE
+Running analysis: DominatorTreeAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: RequireAnalysisPass<ShouldNotRunFunctionPassesAnalysis, Function> on _Z12processArrayRSt6vectorIiSaIiEE (41 instructions)
+Running analysis: ShouldNotRunFunctionPassesAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: CoroSplitPass on (_Z12processArrayRSt6vectorIiSaIiEE) (1 node)
+Running pass: CoroAnnotationElidePass on (_Z12processArrayRSt6vectorIiSaIiEE) (1 node)
+Running analysis: FunctionAnalysisManagerCGSCCProxy on (main)
+Running analysis: OuterAnalysisManagerProxy<AnalysisManager<Module>, LazyCallGraph::SCC, LazyCallGraph&> on (main)
+Running pass: DevirtSCCRepeatedPass on (main) (1 node)
+Running pass: InlinerPass on (main) (1 node)
+Running pass: PostOrderFunctionAttrsPass on (main) (1 node)
+Running pass: OpenMPOptCGSCCPass on (main) (1 node)
+Running pass: SROAPass on main (135 instructions)
+Running analysis: DominatorTreeAnalysis on main
+Running pass: EarlyCSEPass on main (135 instructions)
+Running analysis: MemorySSAAnalysis on main
+Running analysis: AAManager on main
+Running analysis: BasicAA on main
+Running pass: SpeculativeExecutionPass on main (135 instructions)
+Running pass: JumpThreadingPass on main (135 instructions)
+Running analysis: LazyValueAnalysis on main
+Running pass: CorrelatedValuePropagationPass on main (135 instructions)
+Invalidating analysis: LazyValueAnalysis on main
+Running pass: JumpTableToSwitchPass on main (135 instructions)
+Running pass: SimplifyCFGPass on main (135 instructions)
+Running pass: InstCombinePass on main (135 instructions)
+Running analysis: LastRunTrackingAnalysis on main
+Running pass: AggressiveInstCombinePass on main (135 instructions)
+Running pass: LibCallsShrinkWrapPass on main (135 instructions)
+Running pass: TailCallElimPass on main (135 instructions)
+Running pass: SimplifyCFGPass on main (135 instructions)
+Running pass: ReassociatePass on main (135 instructions)
+Invalidating analysis: MemorySSAAnalysis on main
+Invalidating analysis: LastRunTrackingAnalysis on main
+Running pass: ConstraintEliminationPass on main (135 instructions)
+Running analysis: LoopAnalysis on main
+Running analysis: ScalarEvolutionAnalysis on main
+Running pass: LoopSimplifyPass on main (135 instructions)
+Running pass: LCSSAPass on main (136 instructions)
+Running analysis: MemorySSAAnalysis on main
+Running analysis: InnerAnalysisManagerProxy<AnalysisManager<Loop, LoopStandardAnalysisResults&>, Function> on main
+Running pass: LoopInstSimplifyPass on loop %<unnamed loop> in function main
+Running pass: LoopSimplifyCFGPass on loop %<unnamed loop> in function main
+Running pass: LICMPass on loop %<unnamed loop> in function main
+Running pass: LoopRotatePass on loop %<unnamed loop> in function main
+Running pass: LICMPass on loop %<unnamed loop> in function main
+Running pass: SimpleLoopUnswitchPass on loop %<unnamed loop> in function main
+Running pass: LoopInstSimplifyPass on loop %<unnamed loop> in function main
+Running pass: LoopSimplifyCFGPass on loop %<unnamed loop> in function main
+Running pass: LICMPass on loop %<unnamed loop> in function main
+Running pass: LoopRotatePass on loop %<unnamed loop> in function main
+Running pass: LICMPass on loop %<unnamed loop> in function main
+Running pass: SimpleLoopUnswitchPass on loop %<unnamed loop> in function main
+Running pass: LoopInstSimplifyPass on loop %<unnamed loop> in function main
+Running pass: LoopSimplifyCFGPass on loop %<unnamed loop> in function main
+Running pass: LICMPass on loop %<unnamed loop> in function main
+Running pass: LoopRotatePass on loop %<unnamed loop> in function main
+Running pass: LICMPass on loop %<unnamed loop> in function main
+Running pass: SimpleLoopUnswitchPass on loop %<unnamed loop> in function main
+Running pass: SimplifyCFGPass on main (145 instructions)
+Clearing all analysis results for: <possibly invalidated loop>
+Clearing all analysis results for: <possibly invalidated loop>
+Clearing all analysis results for: <possibly invalidated loop>
+Invalidating analysis: DominatorTreeAnalysis on main
+Invalidating analysis: BasicAA on main
+Invalidating analysis: AAManager on main
+Invalidating analysis: LoopAnalysis on main
+Invalidating analysis: ScalarEvolutionAnalysis on main
+Invalidating analysis: MemorySSAAnalysis on main
+Invalidating analysis: InnerAnalysisManagerProxy<AnalysisManager<Loop, LoopStandardAnalysisResults&>, Function> on main
+Running pass: InstCombinePass on main (143 instructions)
+Running analysis: LastRunTrackingAnalysis on main
+Running analysis: DominatorTreeAnalysis on main
+Running analysis: AAManager on main
+Running analysis: BasicAA on main
+Running pass: LoopSimplifyPass on main (135 instructions)
+Running analysis: LoopAnalysis on main
+Invalidating analysis: LastRunTrackingAnalysis on main
+Running pass: LCSSAPass on main (136 instructions)
+Running analysis: ScalarEvolutionAnalysis on main
+Running analysis: InnerAnalysisManagerProxy<AnalysisManager<Loop, LoopStandardAnalysisResults&>, Function> on main
+Running pass: LoopIdiomRecognizePass on loop %<unnamed loop> in function main
+Running pass: IndVarSimplifyPass on loop %<unnamed loop> in function main
+Running pass: LoopDeletionPass on loop %<unnamed loop> in function main
+Running pass: LoopFullUnrollPass on loop %<unnamed loop> in function main
+Running pass: LoopIdiomRecognizePass on loop %<unnamed loop> in function main
+Running pass: IndVarSimplifyPass on loop %<unnamed loop> in function main
+Running pass: LoopDeletionPass on loop %<unnamed loop> in function main
+Running pass: LoopFullUnrollPass on loop %<unnamed loop> in function main
+Running pass: LoopIdiomRecognizePass on loop %<unnamed loop> in function main
+Running pass: IndVarSimplifyPass on loop %<unnamed loop> in function main
+Running pass: LoopDeletionPass on loop %<unnamed loop> in function main
+Running pass: LoopFullUnrollPass on loop %<unnamed loop> in function main
+Running pass: SROAPass on main (145 instructions)
+Running pass: VectorCombinePass on main (145 instructions)
+Running pass: MergedLoadStoreMotionPass on main (145 instructions)
+Running pass: GVNPass on main (145 instructions)
+Running analysis: MemoryDependenceAnalysis on main
+Clearing all analysis results for: <possibly invalidated loop>
+Clearing all analysis results for: <possibly invalidated loop>
+Clearing all analysis results for: <possibly invalidated loop>
+Invalidating analysis: ScalarEvolutionAnalysis on main
+Invalidating analysis: InnerAnalysisManagerProxy<AnalysisManager<Loop, LoopStandardAnalysisResults&>, Function> on main
+Invalidating analysis: MemoryDependenceAnalysis on main
+Running pass: SCCPPass on main (136 instructions)
+Running pass: BDCEPass on main (136 instructions)
+Running analysis: DemandedBitsAnalysis on main
+Running pass: InstCombinePass on main (136 instructions)
+Running analysis: LastRunTrackingAnalysis on main
+Running pass: JumpThreadingPass on main (136 instructions)
+Running analysis: LazyValueAnalysis on main
+Invalidating analysis: LoopAnalysis on main
+Invalidating analysis: DemandedBitsAnalysis on main
+Invalidating analysis: LastRunTrackingAnalysis on main
+Running pass: CorrelatedValuePropagationPass on main (135 instructions)
+Invalidating analysis: LazyValueAnalysis on main
+Running pass: ADCEPass on main (135 instructions)
+Running analysis: PostDominatorTreeAnalysis on main
+Running pass: MemCpyOptPass on main (135 instructions)
+Running analysis: MemorySSAAnalysis on main
+Running pass: DSEPass on main (135 instructions)
+Running analysis: CycleAnalysis on main
+Running pass: MoveAutoInitPass on main (135 instructions)
+Running pass: LoopSimplifyPass on main (135 instructions)
+Running analysis: LoopAnalysis on main
+Invalidating analysis: PostDominatorTreeAnalysis on main
+Invalidating analysis: CycleAnalysis on main
+Running pass: LCSSAPass on main (136 instructions)
+Running analysis: ScalarEvolutionAnalysis on main
+Running analysis: InnerAnalysisManagerProxy<AnalysisManager<Loop, LoopStandardAnalysisResults&>, Function> on main
+Running pass: LICMPass on loop %<unnamed loop> in function main
+Running pass: LICMPass on loop %<unnamed loop> in function main
+Running pass: LICMPass on loop %<unnamed loop> in function main
+Running pass: CoroElidePass on main (145 instructions)
+Running pass: SimplifyCFGPass on main (145 instructions)
+Invalidating analysis: DominatorTreeAnalysis on main
+Invalidating analysis: BasicAA on main
+Invalidating analysis: AAManager on main
+Invalidating analysis: MemorySSAAnalysis on main
+Invalidating analysis: LoopAnalysis on main
+Invalidating analysis: ScalarEvolutionAnalysis on main
+Invalidating analysis: InnerAnalysisManagerProxy<AnalysisManager<Loop, LoopStandardAnalysisResults&>, Function> on main
+Running pass: InstCombinePass on main (143 instructions)
+Running analysis: LastRunTrackingAnalysis on main
+Running analysis: DominatorTreeAnalysis on main
+Running analysis: AAManager on main
+Running analysis: BasicAA on main
+Invalidating analysis: LastRunTrackingAnalysis on main
+Invalidating analysis: DominatorTreeAnalysis on main
+Invalidating analysis: BasicAA on main
+Invalidating analysis: AAManager on main
+Running pass: PostOrderFunctionAttrsPass on (main) (1 node)
+Running analysis: AAManager on main
+Running analysis: BasicAA on main
+Running analysis: DominatorTreeAnalysis on main
+Running pass: RequireAnalysisPass<ShouldNotRunFunctionPassesAnalysis, Function> on main (135 instructions)
+Running analysis: ShouldNotRunFunctionPassesAnalysis on main
+Running pass: CoroSplitPass on (main) (1 node)
+Running pass: CoroAnnotationElidePass on (main) (1 node)
+Invalidating analysis: CallGraphAnalysis on [module]
+Running pass: InvalidateAnalysisPass<ShouldNotRunFunctionPassesAnalysis> on _Z7computei (16 instructions)
+Invalidating analysis: ShouldNotRunFunctionPassesAnalysis on _Z7computei
+Running pass: InvalidateAnalysisPass<ShouldNotRunFunctionPassesAnalysis> on _Z12processArrayRSt6vectorIiSaIiEE (41 instructions)
+Invalidating analysis: ShouldNotRunFunctionPassesAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: InvalidateAnalysisPass<ShouldNotRunFunctionPassesAnalysis> on main (135 instructions)
+Invalidating analysis: ShouldNotRunFunctionPassesAnalysis on main
+Invalidating analysis: InlineAdvisorAnalysis on [module]
+Running pass: DeadArgumentEliminationPass on [module]
+Running pass: CoroCleanupPass on [module]
+Running pass: GlobalOptPass on [module]
+Running pass: GlobalDCEPass on [module]
+Running pass: EliminateAvailableExternallyPass on [module]
+Running pass: ReversePostOrderFunctionAttrsPass on [module]
+Running pass: RecomputeGlobalsAAPass on [module]
+Running analysis: CallGraphAnalysis on [module]
+Running pass: DropUnnecessaryAssumesPass on _Z7computei (16 instructions)
+Running pass: Float2IntPass on _Z7computei (16 instructions)
+Running pass: LowerConstantIntrinsicsPass on _Z7computei (16 instructions)
+Running pass: LoopSimplifyPass on _Z7computei (16 instructions)
+Running analysis: LoopAnalysis on _Z7computei
+Running pass: LCSSAPass on _Z7computei (16 instructions)
+Running analysis: ScalarEvolutionAnalysis on _Z7computei
+Running analysis: InnerAnalysisManagerProxy<AnalysisManager<Loop, LoopStandardAnalysisResults&>, Function> on _Z7computei
+Running pass: LoopRotatePass on loop %<unnamed loop> in function _Z7computei
+Running pass: LoopDeletionPass on loop %<unnamed loop> in function _Z7computei
+Running pass: LoopDistributePass on _Z7computei (17 instructions)
+Running analysis: LoopAccessAnalysis on _Z7computei
+Running pass: InjectTLIMappings on _Z7computei (17 instructions)
+Running pass: LoopVectorizePass on _Z7computei (17 instructions)
+Running analysis: DemandedBitsAnalysis on _Z7computei
+Running pass: DropUnnecessaryAssumesPass on _Z7computei (17 instructions)
+Running pass: InferAlignmentPass on _Z7computei (17 instructions)
+Running pass: LoopLoadEliminationPass on _Z7computei (17 instructions)
+Running pass: InstCombinePass on _Z7computei (17 instructions)
+Running analysis: LastRunTrackingAnalysis on _Z7computei
+Clearing all analysis results for: <possibly invalidated loop>
+Invalidating analysis: ScalarEvolutionAnalysis on _Z7computei
+Invalidating analysis: InnerAnalysisManagerProxy<AnalysisManager<Loop, LoopStandardAnalysisResults&>, Function> on _Z7computei
+Invalidating analysis: LoopAccessAnalysis on _Z7computei
+Invalidating analysis: DemandedBitsAnalysis on _Z7computei
+Running pass: SimplifyCFGPass on _Z7computei (16 instructions)
+Running pass: SLPVectorizerPass on _Z7computei (16 instructions)
+Running analysis: ScalarEvolutionAnalysis on _Z7computei
+Running analysis: DemandedBitsAnalysis on _Z7computei
+Running pass: VectorCombinePass on _Z7computei (16 instructions)
+Running pass: InstCombinePass on _Z7computei (16 instructions)
+Running pass: LoopUnrollPass on _Z7computei (16 instructions)
+Invalidating analysis: LastRunTrackingAnalysis on _Z7computei
+Invalidating analysis: DemandedBitsAnalysis on _Z7computei
+Running pass: WarnMissedTransformationsPass on _Z7computei (17 instructions)
+Running pass: SROAPass on _Z7computei (17 instructions)
+Running pass: InferAlignmentPass on _Z7computei (17 instructions)
+Running pass: InstCombinePass on _Z7computei (17 instructions)
+Running analysis: LastRunTrackingAnalysis on _Z7computei
+Invalidating analysis: ScalarEvolutionAnalysis on _Z7computei
+Running pass: LoopSimplifyPass on _Z7computei (16 instructions)
+Running pass: LCSSAPass on _Z7computei (16 instructions)
+Invalidating analysis: LastRunTrackingAnalysis on _Z7computei
+Running analysis: MemorySSAAnalysis on _Z7computei
+Running analysis: ScalarEvolutionAnalysis on _Z7computei
+Running analysis: InnerAnalysisManagerProxy<AnalysisManager<Loop, LoopStandardAnalysisResults&>, Function> on _Z7computei
+Running pass: LICMPass on loop %<unnamed loop> in function _Z7computei
+Running pass: AlignmentFromAssumptionsPass on _Z7computei (17 instructions)
+Running pass: LoopSinkPass on _Z7computei (17 instructions)
+Running pass: InstSimplifyPass on _Z7computei (17 instructions)
+Invalidating analysis: MemorySSAAnalysis on _Z7computei
+Invalidating analysis: ScalarEvolutionAnalysis on _Z7computei
+Invalidating analysis: InnerAnalysisManagerProxy<AnalysisManager<Loop, LoopStandardAnalysisResults&>, Function> on _Z7computei
+Running pass: DivRemPairsPass on _Z7computei (16 instructions)
+Running pass: MergeICmpsPass on _Z7computei (16 instructions)
+Running pass: ExpandMemCmpPass on _Z7computei (16 instructions)
+Running pass: TailCallElimPass on _Z7computei (16 instructions)
+Running pass: SimplifyCFGPass on _Z7computei (16 instructions)
+Invalidating analysis: DominatorTreeAnalysis on _Z7computei
+Invalidating analysis: BasicAA on _Z7computei
+Invalidating analysis: AAManager on _Z7computei
+Invalidating analysis: LoopAnalysis on _Z7computei
+Running pass: DropUnnecessaryAssumesPass on _Z12processArrayRSt6vectorIiSaIiEE (41 instructions)
+Running pass: Float2IntPass on _Z12processArrayRSt6vectorIiSaIiEE (41 instructions)
+Running pass: LowerConstantIntrinsicsPass on _Z12processArrayRSt6vectorIiSaIiEE (41 instructions)
+Running pass: LoopSimplifyPass on _Z12processArrayRSt6vectorIiSaIiEE (41 instructions)
+Running analysis: LoopAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: LCSSAPass on _Z12processArrayRSt6vectorIiSaIiEE (42 instructions)
+Running analysis: ScalarEvolutionAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Running analysis: InnerAnalysisManagerProxy<AnalysisManager<Loop, LoopStandardAnalysisResults&>, Function> on _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: LoopRotatePass on loop %<unnamed loop> in function _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: LoopDeletionPass on loop %<unnamed loop> in function _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: LoopRotatePass on loop %<unnamed loop> in function _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: LoopDeletionPass on loop %<unnamed loop> in function _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: LoopDistributePass on _Z12processArrayRSt6vectorIiSaIiEE (44 instructions)
+Running analysis: LoopAccessAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: InjectTLIMappings on _Z12processArrayRSt6vectorIiSaIiEE (44 instructions)
+Running pass: LoopVectorizePass on _Z12processArrayRSt6vectorIiSaIiEE (44 instructions)
+Running analysis: DemandedBitsAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: DropUnnecessaryAssumesPass on _Z12processArrayRSt6vectorIiSaIiEE (44 instructions)
+Running pass: InferAlignmentPass on _Z12processArrayRSt6vectorIiSaIiEE (44 instructions)
+Running pass: LoopLoadEliminationPass on _Z12processArrayRSt6vectorIiSaIiEE (44 instructions)
+Running pass: InstCombinePass on _Z12processArrayRSt6vectorIiSaIiEE (44 instructions)
+Running analysis: LastRunTrackingAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Clearing all analysis results for: <possibly invalidated loop>
+Clearing all analysis results for: <possibly invalidated loop>
+Invalidating analysis: ScalarEvolutionAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Invalidating analysis: InnerAnalysisManagerProxy<AnalysisManager<Loop, LoopStandardAnalysisResults&>, Function> on _Z12processArrayRSt6vectorIiSaIiEE
+Invalidating analysis: LoopAccessAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Invalidating analysis: DemandedBitsAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: SimplifyCFGPass on _Z12processArrayRSt6vectorIiSaIiEE (42 instructions)
+Invalidating analysis: DominatorTreeAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Invalidating analysis: BasicAA on _Z12processArrayRSt6vectorIiSaIiEE
+Invalidating analysis: AAManager on _Z12processArrayRSt6vectorIiSaIiEE
+Invalidating analysis: LoopAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Invalidating analysis: LastRunTrackingAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: SLPVectorizerPass on _Z12processArrayRSt6vectorIiSaIiEE (41 instructions)
+Running analysis: ScalarEvolutionAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Running analysis: DominatorTreeAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Running analysis: LoopAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Running analysis: AAManager on _Z12processArrayRSt6vectorIiSaIiEE
+Running analysis: BasicAA on _Z12processArrayRSt6vectorIiSaIiEE
+Running analysis: DemandedBitsAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: VectorCombinePass on _Z12processArrayRSt6vectorIiSaIiEE (41 instructions)
+Running pass: InstCombinePass on _Z12processArrayRSt6vectorIiSaIiEE (41 instructions)
+Running analysis: LastRunTrackingAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: LoopUnrollPass on _Z12processArrayRSt6vectorIiSaIiEE (41 instructions)
+Invalidating analysis: DemandedBitsAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Invalidating analysis: LastRunTrackingAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: WarnMissedTransformationsPass on _Z12processArrayRSt6vectorIiSaIiEE (44 instructions)
+Running pass: SROAPass on _Z12processArrayRSt6vectorIiSaIiEE (44 instructions)
+Running pass: InferAlignmentPass on _Z12processArrayRSt6vectorIiSaIiEE (44 instructions)
+Running pass: InstCombinePass on _Z12processArrayRSt6vectorIiSaIiEE (44 instructions)
+Running analysis: LastRunTrackingAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Invalidating analysis: ScalarEvolutionAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: LoopSimplifyPass on _Z12processArrayRSt6vectorIiSaIiEE (42 instructions)
+Running pass: LCSSAPass on _Z12processArrayRSt6vectorIiSaIiEE (42 instructions)
+Invalidating analysis: LastRunTrackingAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Running analysis: MemorySSAAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Running analysis: ScalarEvolutionAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Running analysis: InnerAnalysisManagerProxy<AnalysisManager<Loop, LoopStandardAnalysisResults&>, Function> on _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: LICMPass on loop %<unnamed loop> in function _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: LICMPass on loop %<unnamed loop> in function _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: AlignmentFromAssumptionsPass on _Z12processArrayRSt6vectorIiSaIiEE (44 instructions)
+Running pass: LoopSinkPass on _Z12processArrayRSt6vectorIiSaIiEE (44 instructions)
+Running pass: InstSimplifyPass on _Z12processArrayRSt6vectorIiSaIiEE (44 instructions)
+Invalidating analysis: MemorySSAAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Invalidating analysis: ScalarEvolutionAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Invalidating analysis: InnerAnalysisManagerProxy<AnalysisManager<Loop, LoopStandardAnalysisResults&>, Function> on _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: DivRemPairsPass on _Z12processArrayRSt6vectorIiSaIiEE (42 instructions)
+Running pass: MergeICmpsPass on _Z12processArrayRSt6vectorIiSaIiEE (42 instructions)
+Running pass: ExpandMemCmpPass on _Z12processArrayRSt6vectorIiSaIiEE (42 instructions)
+Running pass: TailCallElimPass on _Z12processArrayRSt6vectorIiSaIiEE (42 instructions)
+Running pass: SimplifyCFGPass on _Z12processArrayRSt6vectorIiSaIiEE (42 instructions)
+Invalidating analysis: DominatorTreeAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Invalidating analysis: LoopAnalysis on _Z12processArrayRSt6vectorIiSaIiEE
+Invalidating analysis: BasicAA on _Z12processArrayRSt6vectorIiSaIiEE
+Invalidating analysis: AAManager on _Z12processArrayRSt6vectorIiSaIiEE
+Running pass: DropUnnecessaryAssumesPass on main (135 instructions)
+Running pass: Float2IntPass on main (135 instructions)
+Running pass: LowerConstantIntrinsicsPass on main (135 instructions)
+Running pass: LoopSimplifyPass on main (135 instructions)
+Running analysis: LoopAnalysis on main
+Running pass: LCSSAPass on main (136 instructions)
+Running analysis: ScalarEvolutionAnalysis on main
+Running analysis: InnerAnalysisManagerProxy<AnalysisManager<Loop, LoopStandardAnalysisResults&>, Function> on main
+Running pass: LoopRotatePass on loop %<unnamed loop> in function main
+Running pass: LoopDeletionPass on loop %<unnamed loop> in function main
+Running pass: LoopRotatePass on loop %<unnamed loop> in function main
+Running pass: LoopDeletionPass on loop %<unnamed loop> in function main
+Running pass: LoopRotatePass on loop %<unnamed loop> in function main
+Running pass: LoopDeletionPass on loop %<unnamed loop> in function main
+Running pass: LoopDistributePass on main (145 instructions)
+Running analysis: LoopAccessAnalysis on main
+Running pass: InjectTLIMappings on main (145 instructions)
+Running pass: LoopVectorizePass on main (145 instructions)
+Running analysis: DemandedBitsAnalysis on main
+Running pass: DropUnnecessaryAssumesPass on main (145 instructions)
+Running pass: InferAlignmentPass on main (145 instructions)
+Running pass: LoopLoadEliminationPass on main (145 instructions)
+Running pass: InstCombinePass on main (145 instructions)
+Running analysis: LastRunTrackingAnalysis on main
+Clearing all analysis results for: <possibly invalidated loop>
+Clearing all analysis results for: <possibly invalidated loop>
+Clearing all analysis results for: <possibly invalidated loop>
+Invalidating analysis: ScalarEvolutionAnalysis on main
+Invalidating analysis: InnerAnalysisManagerProxy<AnalysisManager<Loop, LoopStandardAnalysisResults&>, Function> on main
+Invalidating analysis: LoopAccessAnalysis on main
+Invalidating analysis: DemandedBitsAnalysis on main
+Running pass: SimplifyCFGPass on main (136 instructions)
+Invalidating analysis: DominatorTreeAnalysis on main
+Invalidating analysis: BasicAA on main
+Invalidating analysis: AAManager on main
+Invalidating analysis: LoopAnalysis on main
+Invalidating analysis: LastRunTrackingAnalysis on main
+Running pass: SLPVectorizerPass on main (135 instructions)
+Running analysis: ScalarEvolutionAnalysis on main
+Running analysis: DominatorTreeAnalysis on main
+Running analysis: LoopAnalysis on main
+Running analysis: AAManager on main
+Running analysis: BasicAA on main
+Running analysis: DemandedBitsAnalysis on main
+Running pass: VectorCombinePass on main (135 instructions)
+Running pass: InstCombinePass on main (135 instructions)
+Running analysis: LastRunTrackingAnalysis on main
+Running pass: LoopUnrollPass on main (135 instructions)
+Invalidating analysis: DemandedBitsAnalysis on main
+Invalidating analysis: LastRunTrackingAnalysis on main
+Running pass: WarnMissedTransformationsPass on main (145 instructions)
+Running pass: SROAPass on main (145 instructions)
+Running pass: InferAlignmentPass on main (145 instructions)
+Running pass: InstCombinePass on main (145 instructions)
+Running analysis: LastRunTrackingAnalysis on main
+Invalidating analysis: ScalarEvolutionAnalysis on main
+Running pass: LoopSimplifyPass on main (136 instructions)
+Running pass: LCSSAPass on main (136 instructions)
+Invalidating analysis: LastRunTrackingAnalysis on main
+Running analysis: MemorySSAAnalysis on main
+Running analysis: ScalarEvolutionAnalysis on main
+Running analysis: InnerAnalysisManagerProxy<AnalysisManager<Loop, LoopStandardAnalysisResults&>, Function> on main
+Running pass: LICMPass on loop %<unnamed loop> in function main
+Running pass: LICMPass on loop %<unnamed loop> in function main
+Running pass: LICMPass on loop %<unnamed loop> in function main
+Running pass: AlignmentFromAssumptionsPass on main (145 instructions)
+Running pass: LoopSinkPass on main (145 instructions)
+Running pass: InstSimplifyPass on main (145 instructions)
+Invalidating analysis: MemorySSAAnalysis on main
+Invalidating analysis: ScalarEvolutionAnalysis on main
+Invalidating analysis: InnerAnalysisManagerProxy<AnalysisManager<Loop, LoopStandardAnalysisResults&>, Function> on main
+Running pass: DivRemPairsPass on main (136 instructions)
+Running pass: MergeICmpsPass on main (136 instructions)
+Running pass: ExpandMemCmpPass on main (136 instructions)
+Running pass: TailCallElimPass on main (136 instructions)
+Running pass: SimplifyCFGPass on main (136 instructions)
+Invalidating analysis: DominatorTreeAnalysis on main
+Invalidating analysis: LoopAnalysis on main
+Invalidating analysis: BasicAA on main
+Invalidating analysis: AAManager on main
+Invalidating analysis: LazyCallGraphAnalysis on [module]
+Invalidating analysis: InnerAnalysisManagerProxy<AnalysisManager<LazyCallGraph::SCC, LazyCallGraph&>, Module> on [module]
+Invalidating analysis: CallGraphAnalysis on [module]
+Running pass: AllocTokenPass on [module]
+Running pass: GlobalDCEPass on [module]
+Running pass: ConstantMergePass on [module]
+Running pass: CGProfilePass on [module]
+Running pass: RelLookupTableConverterPass on [module]
+Running pass: AnnotationRemarksPass on _Z7computei (16 instructions)
+Running pass: AnnotationRemarksPass on _Z12processArrayRSt6vectorIiSaIiEE (41 instructions)
+Running pass: AnnotationRemarksPass on main (135 instructions)
+Running pass: VerifierPass on [module]
+Running analysis: VerifierAnalysis on [module]
